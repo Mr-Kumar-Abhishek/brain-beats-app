@@ -11,6 +11,13 @@
     "ecosystem:cordova"
   ],
   "author": "Abhishek Kumar",
-  "license": "GPL-3"
+  "license": "GPL-3",
+  "devDependencies": {
+    "cordova-plugin-splashscreen": "^6.0.1"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-splashscreen": {}
+    }
+  }
 }
-
