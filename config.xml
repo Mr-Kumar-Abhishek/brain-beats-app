@@ -1,11 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="app.netlify.brain_beats.twa" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>brain beats</name>
-    <description>Sample Apache Cordova App</description>
-    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
-        Apache Cordova Team
+    <description>Brain Beats is a brainwave entertainment portal containing programs of solfeggio frequency, binaural beats and monaural beats.p</description>
+    <author email="mr.kumar.abhishek@email.com" href="https://cordova.apache.org">
+        Abhishek Kumar
     </author>
     <content src="index.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
 </widget>
+
