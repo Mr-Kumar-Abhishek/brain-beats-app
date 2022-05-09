@@ -1,0 +1,51 @@
+.fluidaner {
+  margin-bottom: 200px;  
+}
+
+.text-white {
+  color: #fff;
+}
+
+.btn {
+  margin-top: 10px;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  width: 80px;
+  height: 40px;
+}
+
+.card {
+  margin-top: 10px;
+}
+
+.ad-banner {
+  margin-top: 20px;
+}
+
+.volume-box {
+  position: fixed;
+  padding: 1rem;
+  z-index: 1;
+  width: 100%;
+  bottom: 1px;
+  right: 1px;
+  margin-top: 0;
+  height: 8rem;
+  opacity: 1;
+  border-radius: 10px;
+  background: white;
+  text-align: center;
+  -webkit-box-shadow: -6px -4px 18px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -6px -4px 18px 0px rgba(0,0,0,0.75);
+  box-shadow: -6px -4px 18px 0px rgba(0,0,0,0.75);
+}
+
+input[inputmode="decimal"] {
+  margin-top: 0.6rem;
+}
+
+@media only screen and (min-width: 720px) {
+  .volume-box {
+    width: 540px;
+  }
+}
