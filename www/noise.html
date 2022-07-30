@@ -147,13 +147,16 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="noise.html">Colours of Noise</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://ko-fi.com/brainbeats">Give Coffee</a>
+            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Support
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <a class="dropdown-item" href="mailto:mr.kumar.abhishek@email.com?subject=Brain Beats Help"
+                  <a class="dropdown-item" href="mailto:brainbeats@protonmail.com?subject=Brain Beats Help"
                   >Email</a
                 >
                 </li>
@@ -165,99 +168,41 @@
               </ul>
             </li>
           </ul>
+          <form action="#" class="d-flex"> <input class="form-control mr-2 searching" type="search" placeholder="Search this page" aria-label="Search"></form>
         </div>
       </div>
     </nav>
     
-    <div class="container-fluid fluidaner">
-      
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">White Noise</h5>
-              <div class="row">
-                <div class="col text-left">
-                  <p class="card-text">
-                    White noise is process with flat frequency spectrum when it
-                    is plotted in a linear function of frequency. It is used in
-                    treatment of tinnitus. It is also very good for masking
-                    background sounds.
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col text-end">
-                  <button onclick="white_noise_process(0.3)" class="btn btn-primary">
-                    Play
-                  </button>
-                  <button onclick="stopWhiteNoise();" class="btn btn-secondary">
-                    Stop
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="container-fluid fluidaner noiseContainer">
 
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Pink Noise</h5>
-              <div class="row">
-                <div class="col text-left">
-                  <p class="card-text">
-                    The frequency of pink noise is linear in logarithmic scale.
-                    It used in treatment of hyperacusis and tinnitus.
-                  </p>
+      <template class="data-user-noise">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">  </h5>
+                <div class="row">
+                  <div class="col text-left">
+                    <p class="card-text">
+                      
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col text-end">
-                  <button onclick="pink_noise_process(0.3)" class="btn btn-primary">
-                    Play
-                  </button>
-                  <button onclick="stopPinkNoise()" class="btn btn-secondary">
-                    Stop
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Brown Noise</h5>
-              <div class="row">
-                <div class="col text-left">
-                  <p class="card-text">
-                    Brown noise, or brownian noise refers to a power density
-                    which increases 6 dB per octave with increasing frequency.
-                    Benefits associated while listening to it are relaxation,
-                    improved focus, and of course, sleep improvement.
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col text-end">
-                  <button onclick="brown_noise_process(0.3)" class="btn btn-primary">
-                    Play
-                  </button>
-                  <button onclick="stopBrownNoise()" class="btn btn-secondary">
-                    Stop
-                  </button>
+                <div class="row">
+                  <div class="col text-end">
+                    <button class="btn btn-primary play">
+                      Play
+                    </button>
+                    <button class="btn btn-secondary stop">
+                      Stop
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </div>  
+      </template>
     </div>
 
     <script src="./js/jquery-3.6.0.slim.min.js" ></script>
@@ -266,16 +211,41 @@
     <script src="./js/plugins.js"></script>
     <script src="./noise-processor/noise-processor.js"></script>
     <script>
-      function set_white(val) {
-        whiteNoiseNodeGain.gain.value = val;
-      }
+      const dataUserNoise = document.querySelector(".data-user-noise");
+      const dataNoiseContainer = document.querySelector(".noiseContainer");
+      const searchInput = document.querySelector(".searching");
 
+
+      let nPresets = [];
+      searchInput.addEventListener("input", (e)=> {
+        const value  = e.target.value.toLowerCase(); 
+        nPresets.forEach(nPreset => {
+           console.log(nPreset);
+          const isVisible = nPreset.nTitle.toLowerCase().includes(value) || nPreset.nDesc.toLowerCase().includes(value);
+          nPreset.element.classList.toggle("d-none", !isVisible)
+        });
+      });
+
+    fetch("./json/noise.json")
+      .then(res => res.json())
+      .then(data => {
+       nPresets = data.map(noisePreset => {
+        const noiseNode = dataUserNoise.content.cloneNode(true).children[0];
+        const noiseTitle = noiseNode.querySelector(".card-title");
+        const noiseDescription = noiseNode.querySelector(".card-text");
+        const noisePlay = noiseNode.querySelector(".play");
+        const noiseStop = noiseNode.querySelector(".stop");
+        noiseTitle.textContent = noisePreset.noise_name;
+        noiseDescription.textContent = noisePreset.noise_description;
+        noisePlay.setAttribute("onclick", noisePreset.noise_start);
+        noiseStop.setAttribute("onclick", noisePreset.noise_stop);
+        dataNoiseContainer.append(noiseNode);
+        return {nTitle: noisePreset.noise_name, nDesc: noisePreset.noise_description, element: noiseNode};
+        });
+      });
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-70747360-2"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70747360-2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {

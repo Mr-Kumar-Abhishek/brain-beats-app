@@ -151,13 +151,16 @@
             <li class="nav-item">
               <a class="nav-link" href="noise.html">Colours of Noise</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://ko-fi.com/brainbeats">Give Coffee</a>
+            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Support
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <a class="dropdown-item" href="mailto:mr.kumar.abhishek@email.com?subject=Brain Beats Help"
+                  <a class="dropdown-item" href="mailto:brainbeats@protonmail.com?subject=Brain Beats Help"
                   >Email</a
                 >
                 </li>
@@ -169,12 +172,13 @@
               </ul>
             </li>
           </ul>
+          <form action="#" class="d-flex"> <input class="form-control mr-2 searching" type="search" placeholder="Search this page" aria-label="Search"></form>
         </div>
       </div>
     </nav>
    
-    <div class="container-fluid fluidaner">
-     
+    <div class="container-fluid fluidaner sq-monaural-container">
+ 
       <div class="row">
         <div class="col">
           <div class="card">
@@ -4192,14 +4196,54 @@
           </div>
         </div>
       </div>
+    -->
+      <template class="data-user-sq-monaurals">
 
-      <div class="volume-box">
-        <p>
-          <b><i>volume</i></b>
-        </p>
-        <div class="text-center">
-          <input id="volume" type="number" value="1" min="0" max="100" />
+
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">
+                  
+                </h5>
+                <div class="row">
+                  <div class="col text-left">
+                    <p class="card-text">
+                      
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col text-end">
+                    <button
+                      onclick=""
+                      class="btn btn-primary play"
+                    >
+                      Play
+                    </button>
+                    <button onclick="stop_sq_monaural();" class="btn btn-secondary">
+                      Stop
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
+
+
+
+      </template>
+    </div>
+
+    <div class="volume-box">
+      <p>
+        <b><i>volume</i></b>
+      </p>
+      <div class="text-center">
+        <input id="volume" type="number" value="1" min="0" max="100" />
       </div>
     </div>
 
@@ -4209,5 +4253,39 @@
     <script src="./js/plugins.js"></script>
     <script src="./js/bootstrap-input-spinner.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+      const dataUserSqMonaurals = document.querySelector(".data-user-sq-monaurals");
+      const dataSqMonauralContainer = document.querySelector(".sq-monaural-container");
+      const searchInput = document.querySelector(".searching");
+
+      let sqmPresets = [];
+
+      searchInput.addEventListener("input", (e)=> {
+        const value  = e.target.value.toLowerCase();
+        sqmPresets.forEach(sqmPreset => {
+          const isVisible = sqmPreset.sqmTitle.toLowerCase().includes(value) || sqmPreset.sqmDesc.toLowerCase().includes(value);
+          sqmPreset.element.classList.toggle("d-none", !isVisible)
+        });
+      });
+
+    fetch("./json/sq_monaurals.json")
+      .then(res => res.json())
+      .then(data => {
+       sqmPresets = data.map(sqmonauralPreset => {
+        console.log(sqmonauralPreset);
+        const sqmonauralNode = dataUserSqMonaurals.content.cloneNode(true).children[0];
+        const sqmonauralTitle = sqmonauralNode.querySelector(".card-title");
+        const sqmonauralDescription = sqmonauralNode.querySelector(".card-text");
+        const sqmonauralPlay = sqmonauralNode.querySelector(".play");
+        sqmonauralTitle.textContent = sqmonauralPreset.sq_monaural_name;
+        // console.log(sqmonauralTitle);
+        sqmonauralDescription.textContent = sqmonauralPreset.sq_monaural_description;
+        sqmonauralPlay.setAttribute("onclick", sqmonauralPreset.sq_monaural_start);
+        dataSqMonauralContainer.append(sqmonauralNode);
+       // console.log(sqmonauralNode);
+        return {sqmTitle: sqmonauralPreset.sq_monaural_name, sqmDesc: sqmonauralPreset.sq_monaural_description, element: sqmonauralNode};
+        });
+      });
+    </script>
   </body>
 </html>
