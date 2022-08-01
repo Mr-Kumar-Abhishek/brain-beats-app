@@ -151,6 +151,9 @@
             <li class="nav-item">
               <a class="nav-link" href="noise.html">Colours of Noise</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://ko-fi.com/brainbeats">Give Coffee</a>
+            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Support
@@ -169,7 +172,7 @@
               </ul>
             </li>
           </ul>
-          <form action="#" class="d-flex"> <input class="form-control mr-2 searching" type="search" placeholder="Search this page" aria-label="Search"></form>
+          <form action="#" id="search-form" class="d-flex"> <input class="form-control mr-2 searching" type="search" placeholder="Search this page" aria-label="Search"></form>
         </div>
       </div>
     </nav>
@@ -4282,6 +4285,10 @@
        // console.log(sqmonauralNode);
         return {sqmTitle: sqmonauralPreset.sq_monaural_name, sqmDesc: sqmonauralPreset.sq_monaural_description, element: sqmonauralNode};
         });
+      });
+
+      $("#search-form").submit(function(e) {
+        e.preventDefault();
       });
     </script>
   </body>
