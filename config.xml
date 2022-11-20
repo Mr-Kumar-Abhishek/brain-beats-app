@@ -24,7 +24,7 @@
         <splash src="res/screen/android/splash-port-xxhdpi.png" density="port-xxhdpi" />
         <splash src="res/screen/android/splash-port-xxxhdpi.png" density="port-xxxhdpi" /> 
     </platform>
-    <preference name="android-targetSdkVersion" value="30" />
+    <preference name="android-targetSdkVersion" value="31" />
     <preference name="SplashScreenDelay" value="30000" />
     <preference name="LoadUrlTimeoutValue" value="30000"/>
 </widget>
