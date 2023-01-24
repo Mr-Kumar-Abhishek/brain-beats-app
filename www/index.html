@@ -1,16 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
   <head>
-    <script src="./js/serviceLoader.js"></script>
-    <!-- Global site tag (gtag.js) - Google Ads: 645983156 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-645983156"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-645983156');
-    </script>
+    <script async src="./js/serviceLoader.js"></script>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Brain Beats | Brainwave Entrainment</title>
@@ -60,6 +51,17 @@
     <link href="./css/bootstrap.min.css" rel="stylesheet" >
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="canonical" href="https://brain-beats.netlify.app" />
+    <!-- Global site tag (gtag.js) - Google Ads: 645983156 -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-645983156"></script>
+    <script async src="./js/google-ads.js"></script>
+    -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-70747360-2"
+    ></script>
+    <script async src="./js/google-analytics.js" ></script>
   </head>
 
   <body>
@@ -144,6 +146,12 @@
           <li class="nav-item">
             <a class="nav-link" href="noise.html">Colours of Noise</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="favorites.html">Favorites</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://ko-fi.com/brainbeats">Give Coffee</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Support
@@ -184,6 +192,9 @@
                   </div>
                 </div>
                 <div class="row">
+                  <div class="col-3 text-left fav" id="#">
+                    &nbsp;
+                  </div>
                   <div class="col text-end">
                     <a
                       href=""
@@ -201,29 +212,13 @@
       </template>
     </div>
 
-    <script>
+    <script defer>
       const jsonData = "./json/indexer.json";
     </script>
     <script src="./js/jquery-3.6.0.slim.min.js"></script>
-    <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./js/bootstrap-input-spinner.js"></script>
-    <script src="./js/plugins.js"></script>
-    <script src="./js/main.js"></script>
     <script src="./js/desc-data.js"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-70747360-2"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-70747360-2");
-    </script>
+    <script src="./js/favs.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/plugins.js"></script>
   </body>
 </html>
