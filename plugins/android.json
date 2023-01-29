@@ -9,7 +9,14 @@
   "installed_plugins": {
     "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "app.netlify.brain_beats.twa"
+    },
+    "cordova-plugin-background-mode": {
+      "PACKAGE_NAME": "app.netlify.brain_beats.twa"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "app.netlify.brain_beats.twa"
+    }
+  }
 }
