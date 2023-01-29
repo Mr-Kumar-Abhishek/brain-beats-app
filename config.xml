@@ -27,5 +27,6 @@
     <preference name="android-targetSdkVersion" value="31" />
     <preference name="SplashScreenDelay" value="30000" />
     <preference name="LoadUrlTimeoutValue" value="30000"/>
+    <preference name="BackgroundMode" value="enable" />
 </widget>
 
