@@ -12,7 +12,7 @@ searchInput.addEventListener("input", (e)=> {
   dPresets.forEach(dPreset => {
      console.log(dPreset);
     const isVisible = dPreset.dTitle.toLowerCase().includes(value) || dPreset.dDesc.toLowerCase().includes(value);
-    dPreset.element.classList.toggle("d-none", !isVisible)
+    dPreset.element.classList.toggle("d-none", !isVisible);
   });
 });
 

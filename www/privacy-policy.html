@@ -20,7 +20,7 @@
     <meta name="apple-mobile-web-app-title" content="Privacy Policy | Brain Beats" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-touch-fullscreen" content="yes" />
-    <link rel="apple-touch-icon" href="./img/512x512-brain-beats/mandala-1757304_1280.png">
+    <link rel="apple-touch-icon" href="./img/mandala-1757304_1280.png">
     <meta name="application-name" content="Privacy Policy | Brain Beats" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Privacy Policy | brain beats" />
@@ -31,7 +31,7 @@
     <meta name="theme-color" content="#FFFFFF"/>
     <link rel="manifest" href="./manifest.json" />
     <link rel="stylesheet" href="./css/normalize.min.css" />
-    <link href="./js/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="./css/bootstrap.min.css" rel="stylesheet" >
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="canonical" href="https://brain-beats.netlify.app/privacy-policy.html" />
     <!-- Global site tag (gtag.js) - Google Ads: 645983156 -->
@@ -59,7 +59,7 @@
     
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Brain Beats</a>
+        <a class="navbar-brand" href="/">Brain Beats</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -68,15 +68,27 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="solfeggio-frequency.html"
-              >Solfeggio Frequency</a
-            >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pure-tones.html"
-              >Pure Tones</a
-            >
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Single tones
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                <li>
+                  <a class="dropdown-item" href="solfeggio-frequency.html"
+                    >Solfeggio Frequency</a
+                  >
+                </li>
+                <li>
+                <a class="dropdown-item" href="pure-tones.html"
+                  >Pure Tones</a
+                >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="isochronic-tones.html"
+                    >Isochronic tones</a
+                  >
+                </li>
+              </ul>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -125,6 +137,16 @@
                     >Square wave Monaural Beats Generator</a
                   >
                 </li>
+                <li>
+                  <a class="dropdown-item" href="isochronic-tones-generator.html"
+                    >Isochronic tone Generator</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="dreamachine-generator.html"
+                    >Dreamachine Generator</a
+                  >
+                </li>
               </ul>
             </li>
             <li class="nav-item">
@@ -148,13 +170,23 @@
                   >Chat</a
                 >
                 </li>
+                <li>
+                  <a class="dropdown-item" href="https://ko-fi.com/brainbeats"
+                  >Give Coffee</a
+                >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/privacy-policy.html"
+                  >Privacy Policy</a
+                >
+                </li>
               </ul>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-  
+
     <div class="container-fluid fluidaner">
 
         <div class="row">
@@ -268,10 +300,12 @@
 
 
         <script src="./js/jquery-3.6.0.slim.min.js" ></script>
+        <script src="./js/data.js"></script>
+        <script src="./js/favs.js"></script>
         <script src="./js/bootstrap.bundle.min.js" ></script>
-        <script src="./js/bootstrap-input-spinner.js"></script>
         <script src="./js/plugins.js"></script>
-        <script src="./js/main.js"></script>
+        <script src="./js/bootstrap-input-spinner.js"></script>
+        <script src="./js/main.js"></script> 
 </body>
 
 </html>

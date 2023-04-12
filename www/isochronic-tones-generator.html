@@ -3,9 +3,9 @@
   <head>
     <script async src="./js/serviceLoader.js"></script>
     <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="x-ua-compatibconsole.log("Playing isochronic at " + freq1 + " " + freq2);le" content="ie=edge" />
     <title>
-      Pure Tone Generator | Brain Beats | Brainwave Entrainment
+      Isochronic Tones Generator | Brain Beats | Brainwave Entrainment
     </title>
     <meta
       name="viewport"
@@ -14,16 +14,16 @@
 
     <meta
       name="description"
-      content="Pure Tone generator is tool which generates custom pure tones by having the input of frequency values."
+      content="Isochronic Tones generator is tool which generates custom isochronic tones by having the input of individual frequency values."
     />
     <meta
       name="keywords"
-      content="pure tones, brainwave, entertainment, monaural beats, monaural, binaural, beats"
+      content="pure tones, brainwave, entertainment, isochronic tones, monaural beats, monaural, binaural, beats"
     />
     <meta name="robot" content="index, follow" />
     <meta
       name="subject"
-      content="Pure Tone Generator | Brain Beats | Brainwave Entrainment"
+      content="Isochronic Tones | Brain Beats | Brainwave Entrainment"
     />
     <meta name="author" content="Abhishek Kumar" />
     <meta name="coverage" content="Worldwide" />
@@ -34,36 +34,36 @@
     <meta name="target" content="all" />
     <meta
       name="apple-mobile-web-app-title"
-      content="Brain Beats | Pure Tone Generator"
+      content="Brain Beats | Isochronic Tones"
     />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-touch-fullscreen" content="yes" />
     <link rel="apple-touch-icon" href="./img/mandala-1757304_1280.png">
     <meta
       name="application-name"
-      content="Brain Beats | Pure Tone Generator"
+      content="Brain Beats | Isochronic Tones Generator"
     />
     <meta name="twitter:card" content="summary" />
     <meta
       name="twitter:title"
-      content="brain beats | Pure Tone Generator"
+      content="brain beats | Isochronic Tones Generator"
     />
     <meta
       name="twitter:description"
-      content="Pure Tone generator is tool which generates custom pure tones by having the input of frequency values."
+      content="Isochronic Tones generator is tool which generates custom Isochronic Tones by having the input of individial frequency values."
     />
-    <meta property="og:title" content="brain beats | Pure Tone Generator" />
+    <meta property="og:title" content="brain beats | Isochronic Tones" />
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content="https://brain-beats.netlify.app/pure-tone-generator.html"
+      content="https://brain-beats.netlify.app/isochronic-tones-generator.html"
     />
     <meta name="theme-color" content="#FFFFFF"/>
     <link rel="manifest" href="./manifest.json" />
     <link rel="stylesheet" href="./css/normalize.min.css" />
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet" >
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="canonical" href="https://brain-beats.netlify.app/pure-tone-generator.html" />
+    <link rel="canonical" href="https://brain-beats.netlify.app/isochronic-tones-generator.html" />
     <!-- Global site tag (gtag.js) - Google Ads: 645983156 -->
     <!--
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-645983156"></script>
@@ -85,7 +85,7 @@
         your experience and security.
       </p>
     <![endif]-->
-    
+     
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">Brain Beats</a>
@@ -218,26 +218,37 @@
         </div>
       </div>
     </nav>
-     
+      
+  
     <div class="container-fluid fluidaner">
       
       <div class="row">
         <div class="col">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Pure Tone Generator</h5>
+              <h5 class="card-title">Isochronic Tones Generator</h5>
               <div class="row">
                 <div class="col text-left">
                   <div class="card-text">
                     <form>
                       <div class="row">
                         <div class="form-group col">
-                          <label for="freq">Frequency</label>
+                          <label for="freq1">Base Frequency</label>
                           <input
-                            id="freq"
+                            id="freq1"
                             type="number"
                             class="form-control"
-                            placeholder="Frequency"
+                            placeholder="1st frequency"
+                            min="0"
+                          />
+                        </div>
+                        <div class="form-group col">
+                          <label for="freq2">Beat frequency</label>
+                          <input
+                            id="freq2"
+                            type="number"
+                            class="form-control"
+                            placeholder="2nd Frequency"
                             min="0"
                           />
                         </div>
@@ -249,12 +260,12 @@
               <div class="row">
                 <div class="col text-end">
                   <button
-                    onclick="play_pure_tone_generator();"
+                    onclick="play_isochronic_generator();"
                     class="btn btn-primary"
                   >
                     Play
                   </button>
-                  <button onclick="stop_pure_tone();" class="btn btn-secondary">
+                  <button onclick="stop_isochronic();" class="btn btn-secondary">
                     Stop
                   </button>
                 </div>
@@ -274,7 +285,7 @@
       </div>
     </div>
 
-    <script src="./js/jquery-3.6.0.slim.min.js" ></script>
+    <script src="./js/jquery-3.6.0.slim.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js" ></script>
 
     <script src="./js/plugins.js"></script>

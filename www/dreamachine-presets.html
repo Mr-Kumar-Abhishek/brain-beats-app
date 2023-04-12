@@ -4,9 +4,7 @@
     <script async src="./js/serviceLoader.js"></script>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>
-      Pure Tone Generator | Brain Beats | Brainwave Entrainment
-    </title>
+    <title>Dreamachine Presets | Brain Beats | Brainwave Entrainment</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -14,16 +12,16 @@
 
     <meta
       name="description"
-      content="Pure Tone generator is tool which generates custom pure tones by having the input of frequency values."
+      content="Dreamachine Presets for getting specific states of minds while meditating."
     />
     <meta
       name="keywords"
-      content="pure tones, brainwave, entertainment, monaural beats, monaural, binaural, beats"
+      content="dreamachine, pure tones, brainwave, entertainment, monaural beats, monaural, binaural, beats, solfeggio, solfeggio tones, frequency"
     />
     <meta name="robot" content="index, follow" />
     <meta
       name="subject"
-      content="Pure Tone Generator | Brain Beats | Brainwave Entrainment"
+      content="Dreamachine | Brain Beats | Brainwave Entrainment"
     />
     <meta name="author" content="Abhishek Kumar" />
     <meta name="coverage" content="Worldwide" />
@@ -34,36 +32,30 @@
     <meta name="target" content="all" />
     <meta
       name="apple-mobile-web-app-title"
-      content="Brain Beats | Pure Tone Generator"
+      content="Brain Beats | Dreamachine Presets"
     />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-touch-fullscreen" content="yes" />
     <link rel="apple-touch-icon" href="./img/mandala-1757304_1280.png">
-    <meta
-      name="application-name"
-      content="Brain Beats | Pure Tone Generator"
-    />
+    <meta name="application-name" content="Brain Beats | Dreamachine Presets" />
     <meta name="twitter:card" content="summary" />
-    <meta
-      name="twitter:title"
-      content="brain beats | Pure Tone Generator"
-    />
+    <meta name="twitter:title" content="brain beats | Pure Tones" />
     <meta
       name="twitter:description"
-      content="Pure Tone generator is tool which generates custom pure tones by having the input of frequency values."
+      content="Dreamachine Presets for getting specific states of minds while meditating."
     />
-    <meta property="og:title" content="brain beats | Pure Tone Generator" />
+    <meta property="og:title" content="brain beats | Dreamachine Presets" />
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content="https://brain-beats.netlify.app/pure-tone-generator.html"
+      content="https://brain-beats.netlify.app/dreamachine-presets.html"
     />
     <meta name="theme-color" content="#FFFFFF"/>
-    <link rel="manifest" href="./manifest.json" />
+    <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="./css/normalize.min.css" />
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet" >
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="canonical" href="https://brain-beats.netlify.app/pure-tone-generator.html" />
+    <link rel="canonical" href="https://brain-beats.netlify.app/dreamachine-presets.html" />
     <!-- Global site tag (gtag.js) - Google Ads: 645983156 -->
     <!--
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-645983156"></script>
@@ -85,6 +77,7 @@
         your experience and security.
       </p>
     <![endif]-->
+    
     
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
@@ -215,70 +208,60 @@
               <a class="nav-link" href="dreamachine-presets.html">Dreamachine</a>
             </li>
           </ul>
+          <form action="#" id="search-form" class="d-flex"> <input class="form-control mr-2 searching" type="search" placeholder="Search this page" aria-label="Search"></form>
         </div>
       </div>
     </nav>
-     
-    <div class="container-fluid fluidaner">
-      
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Pure Tone Generator</h5>
-              <div class="row">
-                <div class="col text-left">
-                  <div class="card-text">
-                    <form>
-                      <div class="row">
-                        <div class="form-group col">
-                          <label for="freq">Frequency</label>
-                          <input
-                            id="freq"
-                            type="number"
-                            class="form-control"
-                            placeholder="Frequency"
-                            min="0"
-                          />
-                        </div>
-                      </div>
-                    </form>
+    
+    <div class="container-fluid fluidaner data-container">
+
+      <template class="data-cards">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">  </h5>
+                <div class="row">
+                  <div class="col text-left">
+                    <p class="card-text">
+                      
+                    </p>
                   </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col text-end">
-                  <button
-                    onclick="play_pure_tone_generator();"
-                    class="btn btn-primary"
-                  >
-                    Play
-                  </button>
-                  <button onclick="stop_pure_tone();" class="btn btn-secondary">
-                    Stop
-                  </button>
+                <div class="row">
+                  <div class="col-3 text-left fav">
+                    &nbsp;
+                  </div>
+                  <div class="col text-end">
+                    <button class="btn btn-primary play">
+                      Play
+                    </button>
+                    <button class="btn btn-secondary stop">
+                      Stop
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div class="volume-box">
-        <p>
-          <b><i>volume</i></b>
-        </p>
-        <div class="text-center">
-          <input id="volume" type="number" value="1" min="0" max="100" />
-        </div>
-      </div>
+        </div>  
+      </template>
     </div>
 
-    <script src="./js/jquery-3.6.0.slim.min.js" ></script>
-    <script src="./js/bootstrap.bundle.min.js" ></script>
 
+
+    <script defer>
+      const jsonData = "./json/dreamachines.json";
+    </script>
+    <script src="./js/jquery-3.6.0.slim.min.js" ></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/favs.js"></script>
+    <script src="./js/bootstrap.bundle.min.js" ></script>
     <script src="./js/plugins.js"></script>
     <script src="./js/bootstrap-input-spinner.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+      warning(4);
+    </script>
   </body>
 </html>

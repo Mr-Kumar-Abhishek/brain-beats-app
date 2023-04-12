@@ -13,9 +13,12 @@ var pure_tone_flag = 0;
 var double_tone_flag = 0;
 var single_tone_flag = 0;
 var solfeggio_flag = 0;
+var isochronic_flag = 0;
 var sq_monaural_flag = 0;
 var white_noise_flag = 0;
 var pink_noise_flag = 0;
+var toggle_flag = 0;
+var dreamachine_flag = 0;
 
 var volume;
 var volume_1;
@@ -33,7 +36,6 @@ var white_noise_volume;
 var pink_noise_node;
 var pink_noise_volume;
 
-
 var audioContext;
 var whiteNoiseNode;
 var whiteNoiseNodeGain;
@@ -45,10 +47,61 @@ var boolWhite = 0;
 var boolPink = 0;
 var boolBrown = 0;
 var notification;
+var toggler;
+
 
 
 var oscillator_type = 'sine'; // default values
 var deviation_type = 'binaural'; // default values
+
+  // Get the body element
+  var body = document.querySelector("body");
+
+  var cards = document.querySelectorAll(".card");
+
+  // Define a variable to store the animation duration
+  var duration = 0.01;
+  
+
+function start_dreamachine(freq) {
+  if(dreamachine_flag == 0 ) {
+    dreamachine_flag = 1;
+      // Add the flicker class to the body element
+    body.classList.add("flicker");
+
+    // Calculate the animation duration in seconds
+    duration = 1 / freq;
+
+    // Set the animation duration property on the body element
+    body.style.animationDuration = duration + "s";
+    
+    for (var i = 0; i < cards.length; i++) {
+      // Add the class "flicker" to each element
+      cards[i].classList.add("flicker");
+      cards[i].style.animationDuration = duration + "s";
+    }
+  }else {
+    stop_dreamachine();
+    start_dreamachine(freq);
+  }
+}
+
+function stop_dreamachine() {
+  if(dreamachine_flag == 1 ){
+  dreamachine_flag = 0;
+    // Remove the flicker class from the body element
+  body.classList.remove("flicker");
+  for (var i = 0; i < cards.length; i++) {
+    // Add the class "flicker" to each element
+    cards[i].classList.remove("flicker");
+  }
+  }
+}
+
+function start_dreamachine_generator(){
+  var dream_freq = $("#freq").val();
+  start_dreamachine(dream_freq);
+}
 
 function volume_set(){
   var user_volume = $("#volume").val();
@@ -90,7 +143,7 @@ function stop_pure_tone() {
   stop_single_tone();
 }
 
-function play_single_tone(freq) {
+function play_single_tone(freq, oscillator_type) {
   single_tone_freq = freq;
 
   if (single_tone_flag == 0 ) {
@@ -220,6 +273,20 @@ function play_double_tone (freq1, freq2, form, deviation) {
   }
 }
 
+function play_isochronic(freq1, freq2) {
+  if (isochronic_flag == 0) {
+    isochronic_flag = 1;
+    beat_freq_1 = freq1;
+    beat_freq_2 = freq2 - freq1;
+    console.log("Playing isochronic at " + freq1 + " " + freq2 + " At beat " + beat_freq_1 + " " + beat_freq_2);
+    play_single_tone(beat_freq_1, "square");
+    toggler = window.setInterval(toggle_volume, (1000/(beat_freq_2*2)));
+  }else {
+    stop_isochronic();
+    play_isochronic(freq1, freq2);
+  }
+}
+
 async function play_white_noise() {
   if (boolWhite == 0) {
     stop_all();
@@ -319,6 +386,16 @@ function stop_brown_noise() {
   }
 }
 
+function stop_isochronic() {
+  if (isochronic_flag == 1) {
+    isochronic_flag = 0;
+    clearInterval(toggler);
+    stop_single_tone();
+    console.log("isochronic stopped.");
+  }
+}
+
+
 function play_monaural_generator(){
   var freq1 = $("#freq1").val();
   var freq2 = $("#freq2").val();
@@ -329,6 +406,12 @@ function play_binaural_generator(){
   var freq1 = $("#freq1").val();
   var freq2 = $("#freq2").val();
   play_binaural(freq1, freq2);
+}
+
+function play_isochronic_generator(){
+  var freq1 = $("#freq1").val();
+  var freq2 = $("#freq2").val();
+  play_isochronic(freq1, freq2);
 }
 
 function play_pure_tone_generator(){
@@ -355,9 +438,26 @@ function warning(whichy){
     case 1:
        alert("Lower your volume and use headphones !");
        break;
+    case 3:
+      alert("Sit in a dark room. Set the desired frequency, keep it in front of your eyes, play the dreamachine generator and CLOSE YOUR EYES!");
+      break;
+    case 4:
+      alert("Sit in a dark room, choose a preset, keep it in front of your eyes, play it and CLOSE YOUR EYES!")
   }   
 }
 
+
+function toggle_volume(){
+  if (isochronic_flag == 1) {
+    if ( toggle_flag == 0) {
+      toggle_flag = 1;
+      volume.gain.value = volume_set();
+    } else {
+      toggle_flag = 0;
+      volume.gain.value = 0;
+    }  
+  }
+}
 
 function live_volume_set(){
   console.log("live volume ran");
