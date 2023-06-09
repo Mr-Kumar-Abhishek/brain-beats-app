@@ -1,5 +1,12 @@
 [
    {
+      "data_name":"111 hz - Pure Tone",
+      "data_description":"Pure Tone for angel frequency. It helps in production of endorphines. This frequency helps in cell rejuvination and cell regeneration. By producing endorphines it relieves pain and elevates mood. Gives over all well-being, empathy, and improves focus and memory.",
+      "data_start":"play_pure_tone(111);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"376wcxdv20"
+   },
+   {
       "data_name":"126.22 hz - Pure Tone",
       "data_description":"Pure Tone for Manipura Chakra (slightly below solar plexus). This Manipura Chakra meditation has physical enhancements to give strength against digestive and intestinal disorders, indigestion, food allergies, eating disorders, poor metabolism, diabetes, obesity, eczema, acne and other stress related skin conditions. Improves lack of memory and concentration, frequent fearing, removes feeling uncentered, insomnia and eating disorders.",
       "data_start":"play_pure_tone(126.22);",
@@ -35,6 +42,13 @@
       "data_id":"o9moi622h"
    },
    {
+      "data_name":"222 hz - Pure Tone",
+      "data_description":"Angel frequency for having the ability to rejuvinate your brain and bring together lost relationship. This frequency turns your ideas into reality. If one has difficulty in concentration and focus, this frequency will bring calmness to the mind.",
+      "data_start":"play_pure_tone(222);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"yc5zw6gywp"
+   },
+   {
       "data_name":"256 hz - Pure Tone",
       "data_description":"Pure Tone for root chakra (muladhara) for meditation. Physical enhancement by muladahara, gives strength for lower back pain, scaitica, varicose viens, constipation, diarrhea, rectal or anal problems, problems with groin, hips, legs, knees, calves, ankles and feet. It is related to survival, security and being closest to earth. Associated with colour red and the element earth. It rests at the base of the spine. It tries to remove loneliness, insecurities, feeling ungrounded, unconfidence, abandonment, indecisiveness, depressed states, anxious states, addictions, phobias and obsessions.",
       "data_start":"play_pure_tone(256);",
@@ -54,6 +68,13 @@
       "data_start":"play_pure_tone(295.8);",
       "data_stop":"stop_pure_tone();",
       "data_id":"14ttwbjko"
+   },
+   {
+      "data_name":"333 hz - Pure Tone",
+      "data_description":"This angel frequency can recalibrate your DNA. It opens up a new consciousness for some listeners. It is one of the most angelic as it is one of the master number. This frequency could cleanse and reprogram your mind. It literally transforms you to a new person and it exposes you to totally new life that you have prayed on that. It fills you with abundance of love, positive energy and inner peace.",
+      "data_start":"play_pure_tone(333);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"vax4p1b4ci"
    },
    {
       "data_name":"341 hz - Pure Tone",
@@ -119,6 +140,20 @@
       "data_id":"tguhjtiva"
    },
    {
+      "data_name":"555 hz - Pure Tone",
+      "data_description":"This angelic frequency is all about change. Its for a future of new creation - Whatever that might mean for you. This can destress someone in middle of the biggest crisis they have ever faced. It resets the soul and brain as it prepares for the exact moment of devine interaction.",
+      "data_start":"play_pure_tone(555);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"6sg0l65lq5"
+   },
+   {
+      "data_name":"666 hz - Pure Tone",
+      "data_description":"This angelic frequency is sometimes debated that it is related with satan or evil, it does more good than evil. It is believed that this frequency helps our mind to fix imbalances in metal states and thoughts.",
+      "data_start":"play_pure_tone(666);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"lf74ljvkif"
+   },
+   {
       "data_name":"727 hz - Pure Tone",
       "data_description":"Mostly used on Allergies, Sinusitis. Commonly used as 'cure-all' Rife frequency.",
       "data_start":"play_pure_tone(727);",
@@ -166,6 +201,13 @@
       "data_start":"play_pure_tone(984);",
       "data_stop":"stop_pure_tone();",
       "data_id":"tsdl121rh"
+   },
+   {
+      "data_name":"999 hz - Pure Tone",
+      "data_description":"This angel frequency is celestial in nature. This frequency allows you to connect and vibrate at divine energy. This is a very high frequency of energy. It is the highest frequency in the angelic realms. This represents unity, moving forward, and spiritual awareness.",
+      "data_start":"play_pure_tone(999);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"spkkrpy3pi"
    },
    {
       "data_name":"1024 hz - Pure Tone",
