@@ -56,6 +56,20 @@
       "data_id":"h0oeh39d7"
    },
    {
+      "data_name":"261.63 hz - Pure Tone",
+      "data_description":"Pure Tone for Aries. Aries could use this for relaxation, meditation or study. Musical Note is C",
+      "data_start":"play_pure_tone(261.63);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"k8s8qxmzb0"
+   },
+   {
+      "data_name":"277.18 hz - Pure Tone",
+      "data_description":"Pure Tone for Taurus. Taurus could use this for relaxation, meditation or study. Musical Note is C#",
+      "data_start":"play_pure_tone(277.18);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"0comqc0ms2"
+   },
+   {
       "data_name":"288 hz - Pure Tone",
       "data_description":"Pure Tone for meditation of Svadhishthana (or sacral chakra ). This chakra will give inner strength to manage eating disorders, kidney problems, urinary tract infections, chronic lower back pain, infertility, gynocological problems, dysfunctional mestrual cycles, problems with intestine, spleen and gall bladder. This Sacral chakra preset helps clearing eating disorders, addictions, low self confidence, depedency issues, low libido and unbalanced emotions. Sacral chakra is associated with emotions, feeling, relationships, ceativity and fantasies.",
       "data_start":"play_pure_tone(288);",
@@ -63,11 +77,32 @@
       "data_id":"eis8iawnf"
    },
    {
+      "data_name":"293.66 hz - Pure Tone",
+      "data_description":"Pure tone for gemini. Gemini could use this for relaxation, music and study. Musical Note is D.",
+      "data_start":"play_pure_tone(293.66);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"5fcifmq4xp"
+   },
+   {
       "data_name":"295.8 hz - Pure Tone",
       "data_description":"Pure tone for viceral fat reduction. Must be listened while working out (including walking).",
       "data_start":"play_pure_tone(295.8);",
       "data_stop":"stop_pure_tone();",
       "data_id":"14ttwbjko"
+   },
+   {
+      "data_name":"311.13 hz - Pure Tone",
+      "data_description":"Pure tone for cancer. Cancer can use this for relaxation, meditation or study. Musical Note is D#",
+      "data_start":"play_pure_tone(311.13);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"naknevi9bc"
+   },
+   {
+      "data_name":"329.63 hz - Pure Tone",
+      "data_description":"Pure tone for Leo. Leo can use this for relaxation, meditation or study. Musical Note is E",
+      "data_start":"play_pure_tone(329.63);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"7ynz22jubk"
    },
    {
       "data_name":"333 hz - Pure Tone",
@@ -91,11 +126,39 @@
       "data_id":"hcrkvvhht"
    },
    {
+      "data_name":"349.23 hz - Pure Tone",
+      "data_description":"Pure tone for Virgo. Virgo can use this for study, relaxation or meditation. Musical Note is F.",
+      "data_start":"play_pure_tone(349.23);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"xzyccsiyul"
+   },
+   {
+      "data_name":"369.99 hz - Pure Tone",
+      "data_description":"Pure tone for Libra. Libra can use this for study, relaxation or meditation. Musical Note is F#.",
+      "data_start":"play_pure_tone(369.99);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"iae4mljd7d"
+   },
+   {
       "data_name":"384 hz - Pure Tone",
       "data_description":"Pure tone associated with Gurdjieff vibration associated with root (muladhara) chakra. It is the sixth harmonic of six, center of the brainwave spectrum. It is also assiciated thorat chakra. Color is blue. Musical note is G. This is also assiciated with mineral nutrient chromium. Some may question how one frequency is associated with two chakras. It acts on the reversal process of anxiety, which stays on two chakras namely the root chakra and the throat chakra.",
       "data_start":"play_pure_tone(384);",
       "data_stop":"stop_pure_tone();",
       "data_id":"xzvgixet1"
+   },
+   {
+      "data_name":"392 hz - Pure Tone",
+      "data_description":"Pure tone for scorpio. Scorpio can use this for meditation, relaxation or study. Musical note is G",
+      "data_start":"play_pure_tone(392);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"lrl9yherft"
+   },
+   {
+      "data_name":"415.3 hz - Pure Tone",
+      "data_description":"Pure tone for Sagitarius. Sagitarius can use this for meditation, relaxation or study. Musical note is G#",
+      "data_start":"play_pure_tone(415.3);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"dpe5lmexd0"
    },
    {
       "data_name":"416 hz - Pure Tone",
@@ -126,6 +189,13 @@
       "data_id":"c92kpafyu"
    },
    {
+      "data_name":"440 hz - Pure Tone",
+      "data_description":"Pure tone for capricorn. Capricorn can use this for study, meditation or relaxing. Musical Note is A",
+      "data_start":"play_pure_tone(440);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"62f5e0bzmb"
+   },
+   {
       "data_name":"444 hz - Pure Tone",
       "data_description":"This tone is used by king David in the psalms. Many groups gravitate to this frequency. This is the key to open doors of heaven that no man can open. The feeling attributed to this tone are joy, peace and a sense of security. It helps to align with nature. It is pleasing to mind and body. Has a sense of peace and is emotionally uplifting. Helps to feel secure and opens heavenly portals. Floating in space, the frequency of angels. Old Musical note A.",
       "data_start":"play_pure_tone(444);",
@@ -133,11 +203,25 @@
       "data_id":"vqku8941j"
    },
    {
+      "data_name":"466.16 hz - Pure Tone",
+      "data_description":"Pure tone for Aquarius. Aquarius can use this for relaxation, meditation or study. Musical Note is A#",
+      "data_start":"play_pure_tone(466.16);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"hfl8pfc4wc"
+   },
+   {
       "data_name":"480 hz - Pure Tone",
       "data_description":"Pure tone for meditation on crown Chakra (sahasrar) [Flavour 2]. Musical note is 'B'. This frequency is associated with Phosphorous & Zinc mineral nutrients. This crown chakra is meant for physical enhancements such as it gives strength against light sensitivity, headaches, dementia, auto-immune discorders, neurological disorders. Gives a boost to entire mental, physical and spiritual health for the brain. Gives control over depression, confusion, loss of faith, mental disconnection, dementia, epilepsy, schizophrenia.",
       "data_start":"play_pure_tone(480);",
       "data_stop":"stop_pure_tone();",
       "data_id":"tguhjtiva"
+   },
+   {
+      "data_name":"493.88 hz - Pure Tone",
+      "data_description":"Pure tone for Pisces. Pisces can use this for relaxation, meditation or study. Musical note B.",
+      "data_start":"play_pure_tone(493.88);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"bu6ftl4k7n"
    },
    {
       "data_name":"555 hz - Pure Tone",
