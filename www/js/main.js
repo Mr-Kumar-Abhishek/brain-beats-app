@@ -6,6 +6,7 @@ var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var double_tone_oscillator_1;
 var double_tone_oscillator_2;
 var single_tone_oscillator;
+var rife_oscillators;
 
 var monaural_flag = 0;
 var binaural_flag = 0;
@@ -28,6 +29,7 @@ var volume_2;
 var beat_freq_1;
 var beat_freq_2;
 var single_tone_freq;
+let tone_freq_array;
 
 var bufferSize = 4096;
 
@@ -53,13 +55,22 @@ var boolPink = 0;
 var boolBrown = 0;
 var boolRed = 0;
 var boolBlack = 0;
+var boolRifeMonaural = 0;
+var boolRife3D = 0;
+var boolRife3Dauto = 0;
+var x_value;
+var y_values;
+var z_values;
+
 var notification;
 var toggler;
 
-
+// A global variable to keep track of the number of frequency fields  
+var freq_count = 1;
 
 var oscillator_type = 'sine'; // default values
 var deviation_type = 'binaural'; // default values
+var panning_model = 'HRTF'; // used in binaural and 3D sounds
 
   // Get the body element
   var body = document.querySelector("body");
@@ -378,6 +389,230 @@ async function play_black_noise() {
     blackNoiseNodeGain.connect(audioContext.destination);
   }
 }
+
+function play_rife_monaural_generator(){
+  // Create an empty array to store the frequency values
+  tone_freq_array = [];
+
+  // Loop through all the input elements with id starting with "freq-"
+  $("input[id^='freq-']").each(function(){
+    // Get the value of each input element and push it to the array
+    var tone_freq = $(this).val();
+    tone_freq_array.push(tone_freq);
+  });
+
+  // Pass the array as an argument to play_pure_tone
+  // play_pure_tone(tone_freq_array);
+    console.log(tone_freq_array);
+    play_rife_monaural(tone_freq_array);
+
+}
+
+function play_rife_3d_auto_generator() {
+    // Create an empty array to store the frequency values
+    tone_freq_array = [];
+
+    // Loop through all the input elements with id starting with "freq-"
+    $("input[id^='freq-']").each(function(){
+      // Get the value of each input element and push it to the array
+      var tone_freq = $(this).val();
+      tone_freq_array.push(tone_freq);
+    });
+    play_rife_3d_auto(tone_freq_array);
+}
+
+// A function to generate a random number between min and max
+function random(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+// A function to distribute n points evenly in 3D space
+function distributePoints(n) {
+  // Initialize the 2D array
+  let points = [[], [], []];
+
+  // Calculate the radius of the sphere that contains the points
+  let radius = Math.cbrt(n / (4 / 3 * Math.PI));
+
+  // Scale the radius to fit the range [-1, 1]
+  let scale = 1 / radius;
+
+  // Loop through n times
+  for (let i = 0; i < n; i++) {
+    // Generate a random point on the surface of the sphere using spherical coordinates
+    let theta = random(0, Math.PI); // The polar angle
+    let phi = random(0, 2 * Math.PI); // The azimuthal angle
+    let x = scale * radius * Math.sin(theta) * Math.cos(phi); // The x coordinate
+    let y = scale * radius * Math.sin(theta) * Math.sin(phi); // The y coordinate
+    let z = scale * radius * Math.cos(theta); // The z coordinate
+
+    // Push the coordinates to the corresponding arrays
+    points[0].push(x);
+    points[1].push(y);
+    points[2].push(z);
+  }
+
+  // Return the 2D array
+  return points;
+}
+
+
+
+function play_rife_3d_auto(tone_freq_array) {
+
+  if (boolRife3Dauto ==  0 ) {
+
+  
+    var auto_matrix = distributePoints(tone_freq_array.length);
+
+    console.log(auto_matrix);
+
+    x_values = auto_matrix[0];
+    y_values = auto_matrix[1];
+    z_values = auto_matrix[2];
+
+    console.log(x_values);
+    console.log(y_values);
+    console.log(z_values);
+    play_rife_3d(tone_freq_array, x_values, y_values, z_values);
+  } else {
+    stop_rife_3d_auto();
+    play_rife_3d_auto(tone_freq_array);
+  }
+}
+
+
+function play_rife_monaural(tone_freq_array) {
+    if (boolRifeMonaural == 0) {
+      stop_all();
+      boolRifeMonaural = 1;
+      
+      x_values = [];
+      y_values = [];
+      z_values = [];
+
+      for (var i = 0; i < tone_freq_array.length; i++) {
+        x_values.push(0);
+        y_values.push(0);
+        z_values.push(0);
+      }
+
+      play_rife_3d(tone_freq_array, x_values, y_values, z_values);
+    } else {
+      stop_rife_monaural();
+      play_rife_monaural(tone_freq_array);
+    }
+}
+
+ // A function to play the pure tone generator
+ function play_rife_3d_generator() {
+
+      // Get the frequency values from the input elements
+      tone_freq_array = [];
+      for (var i=0; i<freq_count; i++) {
+        var freq_input= document.getElementById("freq-"+i);
+        if (freq_input) {
+          var freq_value= parseFloat(freq_input.value);
+          if (!isNaN(freq_value) && freq_value > 0) {
+            tone_freq_array.push(freq_value);
+          }
+        }
+      }
+
+      // Get the x-coordinate values from the input elements
+      x_values= [];
+      for (var i=0; i<freq_count; i++) {
+        var x_input= document.getElementById("x-"+i);
+        if (x_input) {
+          var x_value= parseFloat(x_input.value);
+          if (!isNaN(x_value)) {
+            x_values.push(x_value);
+          }
+        }
+      }
+
+      // Get the y-coordinate values from the input elements
+      y_values= [];
+      for (var i=0; i<freq_count; i++) {
+        var y_input= document.getElementById("y-"+i);
+        if (y_input) {
+          var y_value= parseFloat(y_input.value);
+          if (!isNaN(y_value)) {
+            y_values.push(y_value);
+          }
+        }
+      }
+
+      // Get the z-coordinate values from the input elements
+      z_values= [];
+      for (var i=0; i<freq_count; i++) {
+        var z_input= document.getElementById("z-"+i);
+        if (z_input) {
+          var z_value= parseFloat(z_input.value);
+          if (!isNaN(z_value)) {
+            z_values.push(z_value);
+          }
+        }
+      }
+
+      play_rife_3d(tone_freq_array, x_values, y_values, z_values);
+}
+
+function play_rife_3d(tone_freq_array, x_values, y_values, z_values) {
+  if (boolRife3D == 0 ) {
+    boolRife3D = 1;
+  
+      // Check if there are any valid frequency values
+      if (tone_freq_array.length > 0) {
+
+        // Create an array of oscillators for each frequency value
+        rife_oscillators = [];
+        for (var i = 0; i < tone_freq_array.length; i++) {
+          var oscillator = audioCtx.createOscillator();
+          oscillator.type = oscillator_type;
+          oscillator.frequency.value = tone_freq_array[i];
+          rife_oscillators.push(oscillator);
+        }
+
+        // Create an array of panners for each coordinate value
+        var panners = [];
+        for (var i = 0; i < tone_freq_array.length; i++) {
+          var panner = audioCtx.createPanner();
+          panner.panningModel = panning_model; 
+          panner.positionX.setValueAtTime(x_values[i], audioCtx.currentTime);
+          panner.positionY.setValueAtTime(y_values[i], audioCtx.currentTime);
+          panner.positionZ.setValueAtTime(z_values[i], audioCtx.currentTime);
+          panners.push(panner);
+        }
+
+        // Connect each oscillator to its corresponding panner
+        for (var i = 0; i < tone_freq_array.length; i++) {
+          rife_oscillators[i].connect(panners[i]);
+        }
+
+        volume = audioCtx.createGain();
+
+        // Connect each panner to the destination
+        for (var i = 0; i < tone_freq_array.length; i++) {
+          panners[i].connect(volume);
+        }
+
+        volume.connect(audioCtx.destination);
+
+        volume.gain.value = volume_set();
+        
+        // Start each oscillator
+        for (var i = 0; i < tone_freq_array.length; i++) {
+          rife_oscillators[i].start();
+        }
+
+      }
+  } else {
+      stop_rife_3d();
+      play_rife_3d(tone_freq_array, x_values, y_values, z_values);
+  }
+}
+
 function stop_double_tone() {
   if(double_tone_flag == 1){
     double_tone_flag = 0;
@@ -458,6 +693,32 @@ function stop_isochronic() {
   }
 }
 
+function stop_rife(){
+   // Check if there is an audio context and oscillators stored in global variables
+   if (audioCtx && rife_oscillators) {
+
+    // Stop each oscillator
+    for (var i = 0; i < rife_oscillators.length; i++) {
+      rife_oscillators[i].stop();
+    }
+  }
+  
+}
+
+function stop_rife_3d() {
+  stop_rife();
+  boolRife3D = 0;
+}
+
+function stop_rife_monaural() {
+  stop_rife();
+  boolRifeMonaural = 0;
+}
+
+function stop_rife_3d_auto() {
+  stop_rife();
+  boolRife3Dauto = 0;
+}
 
 function play_monaural_generator(){
   var freq1 = $("#freq1").val();
@@ -506,7 +767,18 @@ function warning(whichy){
       break;
     case 4:
       alert("Sit in a dark room, choose a preset, keep it in front of your eyes, play it and CLOSE YOUR EYES!")
-  }   
+      break;    
+    case 5:
+      alert("The minimum and maximum values of x y and z co-ordinates is -1 and 1. You could use decimals. And you already know the minimum and maximum values for frequency (20 hz - 22000)");
+      break;
+    case 6:
+      alert("Use of headphones/earphones is required. If you don't like the auto adjustment of frequencies, stop and play again, without changing the frequencies, the brain beats will try to adjust it again.");
+      break;
+    case 7:
+      alert("Use of headphones/earphones is required.If you don't like the auto adjustment of frequencies, stop and play again, without changing from your opted the frequencies, the brain beats will try to adjust it again.");
+      break;
+    } 
+      
 }
 
 
@@ -525,8 +797,9 @@ function toggle_volume(){
 function live_volume_set(){
   console.log("live volume ran");
   
-  if(solfeggio_flag == 1 || pure_tone_flag  == 1 || single_tone_flag == 1 | angel_flag == 1){
+  if(solfeggio_flag == 1 || pure_tone_flag  == 1 || single_tone_flag == 1 | angel_flag == 1 || boolRifeMonaural == 1 || boolRife3D == 1 || boolRife3Dauto == 1){
    if(volume.gain.value != undefined) {
+    console.log("segi section")
     volume.gain.value = volume_set();
    } 
     
@@ -557,7 +830,7 @@ function live_volume_set(){
     if (blackNoiseNodeGain.gain.value != undefined) {
       blackNoiseNodeGain.gain.value = volume_set();
     }
-  }
+  } 
 }
     
 $("#volume").change(function(){
@@ -580,4 +853,6 @@ function stop_all() {
   if (single_tone_flag == 1 ) { stop_single_tone(); }
   if (double_tone_flag == 1 ) { stop_double_tone(); }
   if (angel_flag == 1 ) { stop_angel(); }
+  if (boolRife3D == 1) { stop_rife_3d(); }
+  if (boolRifeMonaural == 1 ) { stop_rife_monaural(); } 
 }
