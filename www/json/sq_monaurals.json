@@ -1,4 +1,19 @@
 [
+
+   {
+      "data_name":"0.1 hz Square Wave Monaural Beats over Solfeggio 174 hz",
+      "data_description":"Square Wave Monaural Beats for Organ and muscle resonances [Phase 1]. Good for building muscles. To be used during excercise and sleep. Stimulates Pineal gland to produce DMT. [Phase 1]",
+      "data_start":"play_sq_monaural(174, 174.1);",
+      "data_stop":"stop_sq_monaural();",
+      "data_id":"pizyqjz58"
+   },
+   {
+      "data_name":"0.1 hz Square Wave Monaural Beats over Solfeggio 285 hz",
+      "data_description":"Square Wave Monaural Beats for Organ and muscle resonances [Phase 2]. Good for building muscles. To be used during excercise and sleep. Stimulates Pineal gland to produce DMT. [Phase 2]",
+      "data_start":"play_sq_monaural(285, 285.1);",
+      "data_stop":"stop_sq_monaural();",
+      "data_id":"pizyqjz59"
+   },
    {
       "data_name":"0.15 hz Square Wave Monaural Beats over Solfeggio 417 hz",
       "data_description":"Square Wave Monaural Beats for relief from depression [Phase 1] due to past events. This is for mild depression[Phase 1]. Range Monaurals for it are comming soon which will be more effective.",
@@ -783,6 +798,13 @@
       "data_stop":"stop_sq_monaural();",
       "data_id":"vxjn2p8gt"
    },
+   {
+      "data_name":"40 hz Square Wave Monaural Beats over 174 hz solfeggio",
+      "data_description":"Square Wave Monaural Beats at this frequency is used for Alzheimer's therapy [Phase 0] studies  to stimulate an increased neural response and fight symptoms of dementia. This binaural beat has been linked to gamma brain waves and the stimulation of memory. It is associated with improved cognitive functioning at level of memory, reaction time, verbal recall, math learning, various types of memory recall, and musical performance. This also reduces the effects of early onset of schizophrenia (could be used by more advanced patients too).",
+      "data_start":"play_sq_monaural(174, 214);",
+      "data_stop":"stop_sq_monaural();",
+      "data_id":"z5tgfdxiv"
+    },
    {
       "data_name":"40 hz Square Wave Monaural Beats over 852 hz solfeggio",
       "data_description":"Sounds at this frequency is used for Alzheimer's therapy [Phase 1] studies  to stimulate an increased neural response and fight symptoms of dementia. This Monaural beat has been linked to gamma brain waves and the stimulation of memory. It is associated with improved cognitive functioning at level of memory, reaction time, verbal recall, math learning, various types of memory recall, and musical performance.",

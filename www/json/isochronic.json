@@ -1,5 +1,19 @@
 [
-    {
+   {
+    "data_name":"0.1 hz Isochronic Tone over Solfeggio 174 hz",
+    "data_description":"Isochronic Tone for Organ and muscle resonances [Phase 1]. Good for building muscles. To be used during excercise and sleep. Stimulates Pineal gland to produce DMT. [Phase 1]",
+    "data_start":"play_isochronic(174, 174.1);",
+    "data_stop":"stop_isochronic();",
+    "data_id":"mn2b80q34"
+   },
+   {
+    "data_name":"0.1 hz Isochronic Tone over Solfeggio 285 hz",
+    "data_description":"Isochronic Tone for Organ and muscle resonances [Phase 2]. Good for building muscles. To be used during excercise and sleep. Stimulates Pineal gland to produce DMT. [Phase 2]",
+    "data_start":"play_isochronic(285, 285.1);",
+    "data_stop":"stop_isochronic();",
+    "data_id":"mn2b80q33"
+   },
+   {
       "data_name": "0.15 hz Isochronic Tone over Solfeggio 417 hz",
       "data_description": "Isochronic Tone for relief from depression [Phase 1] due to past events. This is for mild depression[Phase 1]. Range Monaurals for it are comming soon which will be more effective.",
       "data_start": "play_isochronic(417, 417.15);",
@@ -183,7 +197,7 @@
     },
     {
       "data_name": "3.5 hz Isochronic Tone over Solfeggio 174 hz",
-      "data_description": "whole being regeneration [Phase 1]. Lower Earth Resonance [Phase 1] or hell resonance [Phase 1]. DNA stimulation [Phase 1].",
+      "data_description": "whole being regeneration [Phase 1]. Lower Earth Resonance [Phase 1] or hell resonance [Phase 1]. DNA stimulation [Phase 1]. Relief from anxiety [Phase 0, 2nd flavor]",
       "data_start": "play_isochronic(174, 177.5);",
       "data_stop": "stop_isochronic();",
       "data_id": "0v8m7qk2i"
@@ -782,6 +796,13 @@
       "data_start": "play_isochronic(963, 996);",
       "data_stop": "stop_isochronic();",
       "data_id": "bjlms946c"
+    },
+    {
+      "data_name":"40 hz Isochronic Tone over 174 hz solfeggio",
+      "data_description":"Isochronic Tone at this frequency is used for Alzheimer's therapy [Phase 0] studies  to stimulate an increased neural response and fight symptoms of dementia. This binaural beat has been linked to gamma brain waves and the stimulation of memory. It is associated with improved cognitive functioning at level of memory, reaction time, verbal recall, math learning, various types of memory recall, and musical performance. This also reduces the effects of early onset of schizophrenia (could be used by more advanced patients too).",
+      "data_start":"play_isochronic(174, 214);",
+      "data_stop":"stop_isochronic();",
+      "data_id":"4d35ktsri"
     },
     {
       "data_name": "40 hz Isochronic Tone over 852 hz solfeggio",

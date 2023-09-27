@@ -1,14 +1,14 @@
 [
    {
       "data_name":"0.1 hz Binaural Beats over Solfeggio 174 hz",
-      "data_description":"Binaural Beats for Organ and muscle resonances [Phase 1]. Good for building muscles. To be used during excercise and sleep.",
+      "data_description":"Binaural Beats for Organ and muscle resonances [Phase 1]. Good for building muscles. To be used during excercise and sleep. Stimulates Pineal gland to produce DMT. [Phase 1]",
       "data_start":"play_binaural(174, 174.1);",
       "data_stop":"stop_binaural();",
       "data_id":"luq902d0un"
    },
    {
       "data_name":"0.1 hz Binaural Beats over Solfeggio 285 hz",
-      "data_description":"Binaural Beats for Organ and muscle resonances [Phase 2]. Good for building muscles. To be used during excercise and sleep.",
+      "data_description":"Binaural Beats for Organ and muscle resonances [Phase 2]. Good for building muscles. To be used during excercise and sleep. Stimulates Pineal gland to produce DMT. [Phase 2]",
       "data_start":"play_binaural(285, 285.1);",
       "data_stop":"stop_binaural();",
       "data_id":"dcpn82qv4p"
@@ -197,7 +197,7 @@
    },
    {
       "data_name":"3.5 hz Binaural Beats over Solfeggio 174 hz",
-      "data_description":"whole being regeneration [Phase 1]. Lower Earth Resonance [Phase 1] or hell resonance [Phase 1]. DNA stimulation [Phase 1].",
+      "data_description":"whole being regeneration [Phase 1]. Lower Earth Resonance [Phase 1] or hell resonance [Phase 1]. DNA stimulation [Phase 1]. Relief from anxiety [Phase 0, 2nd flavor]",
       "data_start":"play_binaural(174, 177.5);",
       "data_stop":"stop_binaural();",
       "data_id":"676rh9wdy"
@@ -805,6 +805,13 @@
       "data_id":"3do4ltotx"
    },
    {
+      "data_name":"40 hz Binaural Beats over 174 hz solfeggio",
+      "data_description":"Binaural beats at this frequency is used for Alzheimer's therapy [Phase 0] studies  to stimulate an increased neural response and fight symptoms of dementia. This binaural beat has been linked to gamma brain waves and the stimulation of memory. It is associated with improved cognitive functioning at level of memory, reaction time, verbal recall, math learning, various types of memory recall, and musical performance. This also reduces the effects of early onset of schizophrenia (could be used by more advanced patients too).",
+      "data_start":"play_binaural(174, 214);",
+      "data_stop":"stop_binaural();",
+      "data_id":"npc1cabhy"
+   },
+   {
       "data_name":"40 hz Binaural Beats over 852 hz solfeggio",
       "data_description":"Sounds at this frequency is used for Alzheimer's therapy [Phase 1] studies  to stimulate an increased neural response and fight symptoms of dementia. This binaural beat has been linked to gamma brain waves and the stimulation of memory. It is associated with improved cognitive functioning at level of memory, reaction time, verbal recall, math learning, various types of memory recall, and musical performance. ",
       "data_start":"play_binaural(852, 892);",
@@ -813,14 +820,14 @@
    },
    {
       "data_name":"40 hz Binaural Beats over 963 hz solfeggio",
-      "data_description":"Sounds at this frequency is used for Alzheimer's therapy [Phase 2] studies to stimulate an increased neural response and fight symptoms of dementia. This binaural beat has been linked to gamma brain waves and the stimulation of memory. It is associated with improved cognitive functioning at level of memory, reaction time, verbal recall, math learning, various types of memory recall, and musical performance. ",
+      "data_description":"Sounds at this frequency is used for Alzheimer's therapy [Phase 2] studies to stimulate an increased neural response and fight symptoms of dementia. This binaural beat has been linked to gamma brain waves and the stimulation of memory. It is associated with improved cognitive functioning at level of memory, reaction time, verbal recall, math learning, various types of memory recall, and musical performance. Note: This preset will not likely to work as presets with carrier frequencies above than 1000 hz don't work on human brain.",
       "data_start":"play_binaural(963, 1003);",
       "data_stop":"stop_binaural();",
       "data_id":"sy59tzm36"
    },
    {
       "data_name":"40 hz Binaural Beats between pure tone 984 hz and pure tone 1024 hz",
-      "data_description":"Sounds at this frequency is used for Alzheimer's therapy [Phase 3] studies to stimulate an increased neural response and fight symptoms of dementia. This binaural beat has been linked to gamma brain waves and the stimulation of memory. It is associated with improved cognitive functioning at level of memory, reaction time, verbal recall, math learning, various types of memory recall, and musical performance. This special preset is also linked to cerebral cortex which increases intelligence over time. Also this balances all the 7 major spiritual chakras",
+      "data_description":"Sounds at this frequency is used for Alzheimer's therapy [Phase 3] studies to stimulate an increased neural response and fight symptoms of dementia. This binaural beat has been linked to gamma brain waves and the stimulation of memory. It is associated with improved cognitive functioning at level of memory, reaction time, verbal recall, math learning, various types of memory recall, and musical performance. This special preset is also linked to cerebral cortex which increases intelligence over time. Also this balances all the 7 major spiritual chakras. Note: This preset will not likely to work as presets with carrier frequencies above than 1000 hz don't work on human brain.",
       "data_start":"play_binaural(984, 1024);",
       "data_stop":"stop_binaural();",
       "data_id":"7mc22gixo"
