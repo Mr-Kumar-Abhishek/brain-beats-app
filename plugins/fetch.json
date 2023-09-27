@@ -22,5 +22,15 @@
     },
     "is_top_level": false,
     "variables": {}
+  },
+  "admob-plus-cordova": {
+    "source": {
+      "type": "registry",
+      "id": "admob-plus-cordova"
+    },
+    "is_top_level": true,
+    "variables": {
+      "APP_ID_ANDROID": "ca-app-pub-1948728148006217~1719776431"
+    }
   }
 }
