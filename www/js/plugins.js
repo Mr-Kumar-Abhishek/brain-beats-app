@@ -24,8 +24,9 @@
 let banner
 
 document.addEventListener('deviceready', async () => {
+  console.log("device ready");
   banner = new admob.BannerAd({
-    adUnitId: 'ca-app-pub-1948728148006217/9806397437',
+    adUnitId: 'ca-app-pub-3940256099942544/6300978111',
   })
 
   banner.on('impression', async (evt) => {
