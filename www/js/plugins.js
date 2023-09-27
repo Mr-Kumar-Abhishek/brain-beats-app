@@ -26,7 +26,6 @@ let banner
 document.addEventListener('deviceready', async () => {
   banner = new admob.BannerAd({
     adUnitId: 'ca-app-pub-1948728148006217/9806397437',
-    position: 'top',
   })
 
   banner.on('impression', async (evt) => {
