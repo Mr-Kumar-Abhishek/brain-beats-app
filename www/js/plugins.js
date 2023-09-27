@@ -22,9 +22,9 @@
 }());
 
 let banner
-
+console.log("device prepared");
 document.addEventListener('deviceready', async () => {
-  console.log("device ready");
+  
   banner = new admob.BannerAd({
     adUnitId: 'ca-app-pub-1948728148006217/1073179640',
   })
