@@ -13,6 +13,9 @@
   "author": "Abhishek Kumar",
   "license": "GPL-3",
   "devDependencies": {
+    "cordova-android": "^12.0.1",
+    "cordova-browser": "^7.0.0",
+    "cordova-electron": "^3.1.0",
     "cordova-plugin-background-mode": "^0.7.3",
     "cordova-plugin-device": "^2.1.0",
     "cordova-plugin-splashscreen": "^6.0.1"
@@ -26,7 +29,11 @@
         "PLAY_SERVICES_VERSION": "22.1.0"
       }
     },
-    "platforms": []
+    "platforms": [
+      "browser",
+      "android",
+      "electron"
+    ]
   },
   "dependencies": {
     "admob-plus-cordova": "2.0.0-alpha.13"
