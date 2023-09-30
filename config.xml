@@ -25,6 +25,16 @@
         <splash src="res/screen/android/splash-port-xxxhdpi.png" density="port-xxxhdpi" /> 
 -->
     </platform>
+    <platform name="browser">
+        <!-- Specify the path to your splash image file -->
+        <splash src="res/icon/android/xxxhdpi.png" />
+    </platform>
+
+    <platform name="electron">
+        <!-- Specify the path to your splash image file -->
+        <splash src="res/icon/android/xxxhdpi.png" />
+    </platform>
+
     <platform name="electron">
         <icon src="res/icon/electron/brain-beats-netlify.png" target="app" />
         <icon src="res/icon/electron/brain-beats-netlify.png" target="installer" />
