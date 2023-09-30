@@ -21,18 +21,3 @@
   }
 }());
 
-let banner
-console.log("device prepared");
-document.addEventListener('deviceready', async () => {
-  
-  banner = new admob.BannerAd({
-    adUnitId: 'ca-app-pub-1948728148006217/1073179640',
-  })
-
-  banner.on('impression', async (evt) => {
-    await banner.hide()
-  })
-
-  await banner.show()
-}, false)
-
