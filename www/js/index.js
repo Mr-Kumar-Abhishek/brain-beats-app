@@ -21,7 +21,7 @@ function onDeviceReady() {
 }
 
 let banner
-console.log("device prepared");
+console.log("device prepared from index");
 document.addEventListener('deviceready', async () => {
   
   banner = new admob.BannerAd({
