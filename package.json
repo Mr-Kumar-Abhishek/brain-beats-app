@@ -1,7 +1,7 @@
 {
   "name": "app.netlify.brain_beats.twa",
   "displayName": "brain beats",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "description": "Brain Beats is a brainwave entertainment portal containing programs of solfeggio frequency, binaural beats and monaural beats.",
   "main": "index.js",
   "scripts": {
@@ -13,9 +13,7 @@
   "author": "Abhishek Kumar",
   "license": "GPL-3",
   "devDependencies": {
-    "cordova-android": "^12.0.1",
     "cordova-browser": "^7.0.0",
-    "cordova-electron": "^3.1.0",
     "cordova-plugin-background-mode": "^0.7.3",
     "cordova-plugin-device": "^2.1.0",
     "cordova-plugin-splashscreen": "^6.0.1"
@@ -30,9 +28,7 @@
       }
     },
     "platforms": [
-      "android",
-      "browser",
-      "electron"
+      "browser"
     ]
   },
   "dependencies": {
