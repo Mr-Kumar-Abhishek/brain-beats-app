@@ -24,7 +24,7 @@ console.log("device prepared from index");
 document.addEventListener('deviceready', async () => {
   
   banner = new admob.BannerAd({
-    adUnitId: 'ca-app-pub-1948728148006217/1073179640',
+    adUnitId: 'ca-app-pub-3940256099942544/6300978111',
   })
 
   banner.on('impression', async (evt) => {
