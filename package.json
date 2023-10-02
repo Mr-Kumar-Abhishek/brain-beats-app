@@ -30,9 +30,9 @@
       }
     },
     "platforms": [
+      "android",
       "browser",
-      "electron",
-      "android"
+      "electron"
     ]
   },
   "dependencies": {
