@@ -32,5 +32,13 @@
     "variables": {
       "APP_ID_ANDROID": "ca-app-pub-1948728148006217~1719776431"
     }
+  },
+  "cordova-plugin-androidx": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-androidx"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }
