@@ -1,7 +1,7 @@
 {
   "name": "app.netlify.brain_beats.twa",
   "displayName": "brain beats",
-  "version": "1.0.34",
+  "version": "1.0.35",
   "description": "Brain Beats is a brainwave entertainment portal containing programs of solfeggio frequency, binaural beats and monaural beats.",
   "main": "index.js",
   "scripts": {
