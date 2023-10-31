@@ -22,7 +22,7 @@
     },
     {
       "data_name":"Red Noise",
-      "data_description":"Red noise is similar to pink noise but with different spectral content and different relationships that is, a decrease of 6.02dB per octave. Benefits associated while listening to it are improved sleep, reduced stress and anxiety, and booted productivity and creativity.",
+      "data_description":"Red noise is similar to pink noise but with different spectral content and different relationships that is, a decrease of 6.02dB per octave. Benefits associated while listening to it are improved sleep, reduced stress and anxiety, and boosted productivity and creativity.",
       "data_start":"play_red_noise();",
       "data_stop":"stop_red_noise();",
       "data_id":"ffm5ifcsy8"
@@ -40,5 +40,40 @@
    "data_start":"play_green_noise();",
    "data_stop":"stop_green_noise();",
    "data_id":"5wh0aqah1b"
+   },
+   {
+      "data_name":"Blue Noise",
+      "data_description":"Blue noise is a type of noise that has more high-frequency components than low-frequency ones. It sounds like a hiss with no bass, and it has a power spectrum that increases with frequency. Blue noise is named after the color of light that has a similar spectrum, which is on the higher end of the visible range. Blue noise is used in some audio applications to reduce distortion and improve sound quality.",
+      "data_start":"play_blue_noise();",
+      "data_stop":"stop_blue_noise();",
+      "data_id":"5wh0aqah1c"
+   },
+   {
+      "data_name":"Violet Noise",
+      "data_description":"Violet noise is a type of sound that has more energy at higher frequencies than lower ones. It is also called purple noise, because it is similar to the color of light that has a high frequency spectrum. Violet noise can be used for various purposes, such as masking tinnitus, enhancing audio signals, or adding randomness to digital processes. Violet noise is created by differentiating white noise, which is a random signal that has equal power at all frequencies. The power spectrum of violet noise is proportional to the square of the frequency, which means it increases by 6 decibels per octave. This makes violet noise very loud and bright at high frequencies, and very quiet and dark at low frequencies.",
+      "data_start":"play_violet_noise();",
+      "data_stop":"stop_violet_noise();",
+      "data_id":"5wh0aqah1d"
+   },
+   {
+      "data_name":"Grey Noise",
+      "data_description":"Grey noise is a type of audio signal where the intensity, or volume, is adjusted so that it sounds equally loud across all frequencies to the human ear. This is because our ears are more sensitive to some frequencies than others. This characteristic makes it distinct from white noise, which has equal intensity across all frequencies. Grey noise is also sometimes called hearing-calibrated noise, because it follows an equal-loudness contour (such as an inverted A-weighting curve) that matches the human perception of sound. Grey noise can be used for various purposes, such as masking unwanted sounds, testing audio equipment, or relaxing the mind",
+      "data_start":"play_grey_noise();",
+      "data_stop":"stop_grey_noise();",
+      "data_id":"5wh0aqah1e"
+   },
+   {
+      "data_name":"Velvet Noise",
+      "data_description":"Velvet noise is a type of sparse random signal that consists of only a few non-zero elements, either +1 or -1, in a given time interval. The name “velvet” comes from the perceptual impression that it sounds smoother than white noise, which has equal power across all frequencies. Velvet noise can be used for various audio signal processing applications, such as decorrelation, reverberation, spatialization, and sound synthesis.",
+      "data_start":"play_velvet_noise();",
+      "data_stop":"stop_velvet_noise();",
+      "data_id":"5wh0aqah1f"
+   },
+   {
+      "data_name":"Orange Noise",
+      "data_description":"Orange noise is a type of noise that uses all the frequencies of the audible spectrum, except for those that correspond to musical notes. It is also known as dissonant noise, because it sounds very harsh and unpleasant to the human ear. Orange noise is the opposite of harmonic noise, which only uses frequencies that are multiples of a fundamental frequency. Orange noise can be used for sound synthesis, sound masking, or sound art.",
+      "data_start":"play_orange_noise();",
+      "data_stop":"stop_orange_noise();",
+      "data_id":"5wh0aqah1g"
    }
  ]
