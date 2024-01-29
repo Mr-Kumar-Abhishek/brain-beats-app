@@ -23,8 +23,6 @@ var dreamachine_flag = 0;
 var angel_flag = 0;
 
 var volume;
-var volume_1;
-var volume_2;
 
 var beat_freq_1;
 var beat_freq_2;
@@ -88,6 +86,10 @@ var boolTurquoise = 0;
 var x_value;
 var y_values;
 var z_values;
+
+var k_arr = [63, 174, 285, 396, 417, 528, 549.21, 618, 639, 669, 741, 762, 831, 852, 963, 1074, 1185, 1296, 1407, 1518, 1629, 1740, 1851, 1782, 1803, 1962, 2073, 2184, 2295, 2406, 2517, 2628, 2739, 2850, 2961];
+var kundalini_flag = 0;
+var k_indexer = 0;
 
 var notification;
 var toggler;
@@ -269,6 +271,23 @@ function play_single_tone(freq, oscillator_type) {
 
 }
 
+function play_kundalini(beat_freq_1) {
+  
+  beat_freq_2 = beat_freq_1 + 55;
+
+  if (kundalini_flag == 0) {
+  
+    kundalini_flag = 1;
+  
+    play_monaural(beat_freq_1, beat_freq_2);
+
+  }else {
+
+    stop_kundalini();
+    play_kundalini(beat_freq_1);
+  }
+
+}
 
 function play_monaural(freq1, freq2){
   
@@ -342,18 +361,16 @@ function play_double_tone (freq1, freq2, form, deviation) {
     double_tone_oscillator_1.frequency.setValueAtTime(freq1, audioCtx.currentTime);
     double_tone_oscillator_2.frequency.setValueAtTime(freq2, audioCtx.currentTime);
     
-    volume_1 = audioCtx.createGain();
-    volume_2 = audioCtx.createGain();
+    volume = audioCtx.createGain();
     
     double_tone_oscillator_1.connect(pannerNode_1);
     double_tone_oscillator_2.connect(pannerNode_2);
       
-    pannerNode_1.connect(volume_1);
-    pannerNode_2.connect(volume_2);
+    pannerNode_1.connect(volume);
+    pannerNode_2.connect(volume);
     
-    volume_1.connect(audioCtx.destination);
-    volume_2.connect(audioCtx.destination);
-    
+    volume.connect(audioCtx.destination);
+
     if (deviation == "binaural") {
       pannerNode_1.positionX.setValueAtTime(-1, audioCtx.currentTime);
       pannerNode_2.positionX.setValueAtTime(1, audioCtx.currentTime);
@@ -362,8 +379,7 @@ function play_double_tone (freq1, freq2, form, deviation) {
       pannerNode_2.positionX.setValueAtTime(0, audioCtx.currentTime);
     }
     
-    volume_1.gain.value = volume_set();
-    volume_2.gain.value = volume_set();
+    volume.gain.value = volume_set();
     
     double_tone_oscillator_1.start();
     double_tone_oscillator_2.start();
@@ -379,12 +395,30 @@ function play_isochronic(freq1, freq2) {
     isochronic_flag = 1;
     beat_freq_1 = freq1;
     beat_freq_2 = freq2 - freq1;
-    console.log("Playing isochronic at " + freq1 + " " + freq2 + " At beat " + beat_freq_1 + " " + beat_freq_2);
+  //  console.log("Playing isochronic at " + freq1 + " " + freq2 + " At beat " + beat_freq_1 + " " + beat_freq_2);
     play_single_tone(beat_freq_1, "square");
     toggler = window.setInterval(toggle_volume, (1000/(beat_freq_2*2)));
   }else {
     stop_isochronic();
     play_isochronic(freq1, freq2);
+  }
+}
+
+async function kundalini_rotator() {
+  // Use a while loop to keep running the function until some condition is met
+  while (true) {
+    if(k_indexer == k_arr.length) {
+      k_indexer = 0;
+    }
+    if ($(".yin-yang").val() == 0) {
+      break;
+    }
+    play_kundalini(k_arr[k_indexer]);
+    k_indexer++;
+    // Use a break statement to exit the loop when you want to stop the function
+    
+    // Use a sleep function to pause the execution for 1000 milliseconds
+    await new Promise(done => setTimeout(() => done(), 1000));
   }
 }
 
@@ -596,7 +630,7 @@ function play_sine_monaural_generator(){
 
   // Pass the array as an argument to play_pure_tone
   // play_pure_tone(tone_freq_array);
-    console.log(tone_freq_array);
+  // console.log(tone_freq_array);
     play_sine_monaural(tone_freq_array);
 
 }
@@ -723,15 +757,15 @@ function play_sine_3d_auto(tone_freq_array) {
   
     var auto_matrix = distributePoints(tone_freq_array.length);
 
-    console.log(auto_matrix);
+  //  console.log(auto_matrix);
 
     x_values = auto_matrix[0];
     y_values = auto_matrix[1];
     z_values = auto_matrix[2];
 
-    console.log(x_values);
-    console.log(y_values);
-    console.log(z_values);
+  //  console.log(x_values);
+  //  console.log(y_values);
+  //  console.log(z_values);
     play_sine_3d(tone_freq_array, x_values, y_values, z_values);
   } else {
     stop_sine_3d_auto();
@@ -932,6 +966,35 @@ function stop_sq_monaural(){
   }
 }
 
+function stop_kundalini() {
+  console.log("kundalini flag value = " + kundalini_flag);
+  if (kundalini_flag == 1 ) {
+    kundalini_flag = 0;
+    console.log("Stop Kundalini Called.");
+    stop_monaural();
+  }
+}
+
+function kundalini_halter() {
+  $(".yin-yang").val(0);
+  stop_kundalini();
+  k_indexer = 0;
+}
+
+
+function kundalini_toggler(){
+  if ( $(".yin-yang").val() == 0) {
+    $(".yin-yang").val(1); 
+    kundalini_rotator();
+  }else if ($(".yin-yang").val() == 1) {
+    $(".yin-yang").val(0);
+    stop_kundalini();
+    k_indexer--;
+  }
+}
+
+
+
 function stop_white_noise() {
   if (boolWhite == 1 ) {
     boolWhite = 0;
@@ -1029,7 +1092,7 @@ function stop_isochronic() {
     isochronic_flag = 0;
     clearInterval(toggler);
     stop_single_tone();
-    console.log("isochronic stopped.");
+  //  console.log("isochronic stopped.");
   }
 }
 
@@ -1142,6 +1205,11 @@ function warning(whichy){
     case 9:
       alert("Disclaimer: These healing frequencies are not a substitute for professional medical care. Use them at your own risk and discretion. \n\n Note: For really high or low frequencies you would need special speakers/headphones/earphones to play them.");
       break;
+    case 10:
+      alert("Instructions: \n 1. Sit in quite place \n 2. Observe the rotating symbol \n 3. Tap on the rotating symbol to start the program \n 4. Listen to the frequencies and sound. \n 5. It is recommended to use earphones. \n 6. After awakening no need to observe the symbol, just listen to the frequencies. \n 7. Tap the rotating symbol to pause session. \n 8. Double Tap on rotating symbol to stop session.");
+      break;
+    default:
+      alert("Something went wrong.. reopen please.");
     }
 
       
@@ -1163,19 +1231,20 @@ function toggle_volume(){
 function live_volume_set(){
   console.log("live volume ran");
   
-  if(solfeggio_flag == 1 || pure_tone_flag  == 1 || single_tone_flag == 1 | angel_flag == 1 || boolSineMonaural == 1 || boolSine3D == 1 || boolSine3Dauto == 1 || boolRife3Dauto == 1 || boolRifeMonaural == 1 || boolRife3D == 1){
+  if(solfeggio_flag == 1 || pure_tone_flag  == 1 || single_tone_flag == 1 || 
+    angel_flag == 1 || boolSineMonaural == 1 || boolSine3D == 1 || 
+    boolSine3Dauto == 1 || boolRife3Dauto == 1 || boolRifeMonaural == 1 || 
+    boolRife3D == 1 || monaural_flag == 1 || binaural_flag == 1 || 
+    sq_monaural_flag == 1 || double_tone_flag == 1 || kundalini_flag == 1 ){
+
    if(volume.gain.value != undefined) {
-    console.log("segi section")
+    console.log("controling volumes")
     volume.gain.value = volume_set();
-   } 
-    
-  }else if (monaural_flag == 1 || binaural_flag == 1 || 
-            sq_monaural_flag == 1 || double_tone_flag == 1 ){
-    
-    if(volume_1.gain.value != undefined && volume_2.gain.value != undefined) {
-      volume_1.gain.value = volume_set();
-      volume_2.gain.value = volume_set();
-     }  
+
+   }else {
+      console.log("Some thing wrong volume not defined !!");
+   }
+
   }else if (boolWhite == 1 ) {
     if(whiteNoiseNodeGain.gain.value != undefined ) {
       whiteNoiseNodeGain.gain.value = volume_set();
