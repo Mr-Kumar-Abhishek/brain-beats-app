@@ -34,3 +34,6 @@ document.addEventListener('deviceready', async () => {
   await banner.show()
 }, false)
 
+navigator.splashscreen.hide();
+
+
