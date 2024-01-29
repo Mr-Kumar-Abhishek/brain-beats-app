@@ -40,7 +40,7 @@
     <!-- 
     <preference name="AutoHideSplashScreen" value="false" />
     -->
-    <preference name="LoadUrlTimeoutValue" value="10000"/>
+    <preference name="LoadUrlTimeoutValue" value="15000"/>
     <preference name="BackgroundMode" value="enable" />
 </widget>
 
