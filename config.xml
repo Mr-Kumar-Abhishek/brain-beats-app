@@ -36,8 +36,11 @@
     <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/icon/android/xxxhdpi.png" />
     <preference name="android-targetSdkVersion" value="33" />
     <preference name="SplashScreen" value="img/logo.png" />
-    <preference name="SplashScreenDelay" value="9000" />
-    <preference name="LoadUrlTimeoutValue" value="9000"/>
+    <!-- 
+        <preference name="SplashScreenDelay" value="9000" />
+    -->
+    <preference name="AutoHideSplashScreen" value="false" />
+    <preference name="LoadUrlTimeoutValue" value="15000"/>
     <preference name="BackgroundMode" value="enable" />
 </widget>
 
