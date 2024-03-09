@@ -70,6 +70,13 @@
      "data_id": "j5arlnle5"
    },
    {
+    "data_name": "2 hz Dreamachine Beats",
+    "data_description": "Dreamachine beats for nerve regeneration.",
+    "data_start": "start_dreamachine(2);",
+    "data_stop": "stop_dreamachine();",
+    "data_id": "j5arlnle6"
+   },
+   {
      "data_name": "2.4 hz Dreamachine Beats",
      "data_description": "Dreamachine beats for deep. Heal tissues while sleeping.",
      "data_start": "start_dreamachine(2.4);",
@@ -92,7 +99,7 @@
    },
    {
      "data_name": "4 hz Dreamachine Beats",
-     "data_description": "Dreamachine beats for subjects who suffer from chronic fatigue who exhaust very easily, when they moved to 4HZ these individuals showed marked improvement in the length of time between the occurrence of exhaustion after certain exercises were completed. Schizophrenia patients have reported hearing of less hallucinatory voices after listening to these beats regularly. Power Nap. Seduction. Telepathy. Subconscious Problem Solving and full Memory Scanning (only if one manages to stay awake). It is associated with object naming which is an important aspect of memory. Catecholamines, which is vital for memory and learning, responds at around 4 HZ",
+     "data_description": "Dreamachine beats for subjects who suffer from chronic fatigue who exhaust very easily, when they moved to 4HZ these individuals showed marked improvement in the length of time between the occurrence of exhaustion after certain exercises were completed. Schizophrenia patients have reported hearing of less hallucinatory voices after listening to these beats regularly. Power Nap. Seduction. Telepathy. Astral Projection [Flavor 0]. Subconscious Problem Solving and full Memory Scanning (only if one manages to stay awake). It is associated with object naming which is an important aspect of memory. Catecholamines, which is vital for memory and learning, responds at around 4 HZ",
      "data_start": "start_dreamachine(4);",
      "data_stop": "stop_dreamachine();",
      "data_id": "ikkck0zpp"
@@ -114,13 +121,13 @@
    {
      "data_name": "6 hz Dreamachine Beats",
      "data_description": "Dreamachine beats for reduction in unwillingness to do work due to past memories. Must be used during sleep otherwise it may bring in depression and confusion. Typically it is designed to bring your mind to a more relaxed states which if listened too much (around 12 hours) being awake could cause undesired effects. For getting out of hypnosis and bringing clarity. For active learning and retention. ",
-     "data_start": "start_dreamachine(417, 423);",
+     "data_start": "start_dreamachine(6);",
      "data_stop": "stop_dreamachine();",
      "data_id": "oi53lioo6"
    },
    {
      "data_name": "6.30 hz Dreamachine Beats",
-     "data_description": "Dreamachine beats for Mental vision and astral projection vision. Might also experience accelerated learning and increased retention. Minor effects include reduction in anger and irritability.",
+     "data_description": "Dreamachine beats for Mental vision and astral projection vision [flavor 1]. Might also experience accelerated learning and increased retention. Minor effects include reduction in anger and irritability.",
      "data_start": "start_dreamachine(6.3);",
      "data_stop": "stop_dreamachine();",
      "data_id": "o5rcb3wg1"
@@ -134,7 +141,7 @@
    },
    {
      "data_name": "7 hz Dreamachine Beats",
-     "data_description": "Enhanced bone growth. Used as a treatment of sleep disturbances. Mental vision and astral projection vision, bending of objects, psychic vision for psychic surgery, Increased Reaction Time, Mass aggregate frequency. It can deaggregate matter",
+     "data_description": "Enhanced bone growth. Used as a treatment of sleep disturbances. Mental vision and astral projection vision [flavor 2], bending of objects, psychic vision for psychic surgery, Increased Reaction Time, Mass aggregate frequency. It can deaggregate matter",
      "data_start": "start_dreamachine(7);",
      "data_id": "w2tr2dsc0"
    },
