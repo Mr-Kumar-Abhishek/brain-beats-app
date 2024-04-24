@@ -819,6 +819,20 @@
       "data_id":"af99soa0e"
    },
    {
+      "data_name":"27 hz Monaural Beats over 852 hz solfeggio",
+      "data_description":"Monaural Beats for astral projection [flavor 4, phase 1] (Range lies from 26 hz to 28 hz). Produced during meditation by some [Phase 1].",
+      "data_start":"play_monaural(852, 879);",
+      "data_stop":"stop_monaural();",
+      "data_id":"af99soa0f"
+   },
+   {
+      "data_name":"27 hz Monaural Beats over 963 hz solfeggio",
+      "data_description":"Monaural Beats for astral projection [flavor 4, phase 2] (Range lies from 26 hz to 28 hz). Produced during meditation by some [Phase 2].",
+      "data_start":"play_monaural(963, 990);",
+      "data_stop":"stop_monaural();",
+      "data_id":"af99soa0g"
+   },
+   {
       "data_name":"33 hz Monaural Beats over 963 hz solfeggio",
       "data_description":"Initiates Christ consciousness and hypersensitivity. Pyramid frequency (inside), Schumann Resonance (5th frequency of 7).",
       "data_start":"play_monaural(963, 996);",
@@ -852,6 +866,34 @@
       "data_start":"play_monaural(984, 1024);",
       "data_stop":"stop_monaural();",
       "data_id":"kmi9kc6bj"
+   },
+   {
+      "data_name":"63 hz Monaural Beats over 852 hz solfeggio",
+      "data_description":"Monaural Beats for astral projection [flavor 5, phase 1]",
+      "data_start":"play_monaural(852, 915);",
+      "data_stop":"stop_monaural();",
+      "data_id":"kmi9kc6bh"
+   },
+   {
+      "data_name":"63 hz Monaural Beats over 963 hz solfeggio",
+      "data_description":"Monaural Beats for astral projection [flavor 5, phase 2]",
+      "data_start":"play_monaural(963, 1026);",
+      "data_stop":"stop_monaural();",
+      "data_id":"kmi9kc6i"
+   },
+   {
+      "data_name":"70 hz Monaural Beats over 852 hz solfeggio",
+      "data_description":"Monaural Beats for astral projection [flavor 6, phase 1]",
+      "data_start":"play_monaural(852, 922);",
+      "data_stop":"stop_monaural();",
+      "data_id":"kmi9kc6j"
+   },
+   {
+      "data_name":"70 hz Monaural Beats over 963 hz solfeggio",
+      "data_description":"Monaural Beats for astral projection [flavor 6, phase 2]",
+      "data_start":"play_monaural(963, 1033);",
+      "data_stop":"stop_monaural();",
+      "data_id":"kmi9kc6k"
    },
    {
       "data_name":"83 hz Monaural Beats over 174 hz solfeggio",

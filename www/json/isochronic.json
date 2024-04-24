@@ -812,6 +812,20 @@
       "data_id": "iy4ud5gbt"
     },
     {
+      "data_name": "27 hz Isochronic Tone over 852 hz solfeggio",
+      "data_description": "Isochronic Tone for astral projection [flavor 4, phase 1] (Range lies from 26 hz to 28 hz). Produced during meditation by some [Phase 1].",
+      "data_start": "play_isochronic(852, 879);",
+      "data_stop": "stop_isochronic();",
+      "data_id": "iy4ud5gbu"
+    },
+    {
+      "data_name": "27 hz Isochronic Tone over 963 hz solfeggio",
+      "data_description": "Isochronic Tone for astral projection [flavor 4, phase 2] (Range lies from 26 hz to 28 hz). Produced during meditation by some [Phase 2].",
+      "data_start": "play_isochronic(963, 990);",
+      "data_stop": "stop_isochronic();",
+      "data_id": "iy4ud5gbv"
+    },
+    {
       "data_name": "33 hz Isochronic Tone over 963 hz solfeggio",
       "data_description": "Initiates Christ consciousness and hypersensitivity. Pyramid frequency (inside), Schumann Resonance (5th frequency of 7).",
       "data_start": "play_isochronic(963, 996);",
@@ -845,6 +859,34 @@
       "data_start": "play_isochronic(984, 1024);",
       "data_stop": "stop_isochronic();",
       "data_id": "cttatzyqs"
+    },
+    {
+      "data_name": "63 hz Isochronic Tone over 852 hz solfeggio",
+      "data_description": "Isochronic Tone for astral projection [flavor 5, phase 1]",
+      "data_start": "play_isochronic(852, 915);",
+      "data_stop": "stop_isochronic();",
+      "data_id": "cttatzyqt"
+    },
+    {
+      "data_name": "63 hz Isochronic Tone over 963 hz solfeggio",
+      "data_description": "Isochronic Tone for astral projection [flavor 5, phase 2]",
+      "data_start": "play_isochronic(963, 1026);",
+      "data_stop": "stop_isochronic();",
+      "data_id": "cttatzyqv"
+    },
+    {
+      "data_name": "70 hz Isochronic Tone over 852 hz solfeggio",
+      "data_description": "Isochronic Tone for astral projection [flavor 6, phase 1]",
+      "data_start": "play_isochronic(852, 922);",
+      "data_stop": "stop_isochronic();",
+      "data_id": "cttatzyqx"
+    },
+    {
+      "data_name": "70 hz Isochronic Tone over 963 hz solfeggio",
+      "data_description": "Isochronic Tone for astral projection [flavor 6, phase 2]",
+      "data_start": "play_isochronic(852, 1033);",
+      "data_stop": "stop_isochronic();",
+      "data_id": "cttatzyqy"
     },
     {
       "data_name": "83 hz Isochronic Tone over 174 hz solfeggio",
