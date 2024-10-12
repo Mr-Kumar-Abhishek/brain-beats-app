@@ -40,5 +40,13 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "cordova-plugin-notifications-permission": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-notifications-permission"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }
