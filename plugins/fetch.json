@@ -10,7 +10,7 @@
   "cordova-plugin-background-mode": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-background-mode"
+      "id": "https://bitbucket.org/TheBosZ/cordova-plugin-run-in-background"
     },
     "is_top_level": true,
     "variables": {}

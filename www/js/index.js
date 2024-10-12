@@ -17,6 +17,9 @@ function onDeviceReady() {
     // Cordova is now initialized. Have fun!
 
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
+
+    cordova.plugins.foregroundService.start('Brain Beats', 'Brain Beats Syncing', 'brainbeats', 3, 10);
+    cordova.plugins.backgroundMode.enable();
 }
 
 let banner
