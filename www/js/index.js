@@ -18,6 +18,21 @@ function onDeviceReady() {
 
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
 
+    cordova.plugins.backgroundMode.setDefaults({
+      title: 'Title for the notification',
+      text: 'Textual description for the notification',
+      subText: 'Some subtext for the notification',
+      icon: 'brainbeats', // this will look for icon.png in platforms/android/res/drawable|mipmap
+      color: 'F14F4D',
+      resume: true,
+      hidden: false,
+      bigText: false,
+      channelName: 'my-app-notification',
+      channelDescription: 'App channel description',
+      showWhen: false,
+      visibility: 'private'
+    });
+
     /* Your code. (Make sure to not alert(status) until splashscreen
       * has been hidden with navigator.splashscreen.hide() 
       * else alert might not show and your app seems to stall.)
