@@ -43,6 +43,7 @@ function onDeviceReady() {
                   case permissionPlugin.GRANTED_ALREADY:
                   case permissionPlugin.NOT_NEEDED:
                       /* Notification shows the same as it did before Android 13 (API Level 33). */
+                      cordova.plugins.foregroundService.start('Brain Beats', 'Brain Beats Syncing', 'brainbeats', 3, 10);
                       break;
                   case permissionPlugin.DENIED_NOT_PERMANENTLY_NEWLY:
                   case permissionPlugin.DENIED_PERMANENTLY_NEWLY:
@@ -77,8 +78,8 @@ function onDeviceReady() {
           }
       );
 
-    cordova.plugins.foregroundService.start('Brain Beats', 'Brain Beats Syncing', 'brainbeats', 3, 10);
-    cordova.plugins.backgroundMode.enable();
+    
+ //  cordova.plugins.backgroundMode.enable();
 }
 
 let banner

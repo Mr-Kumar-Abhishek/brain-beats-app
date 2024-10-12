@@ -30,7 +30,8 @@
     },
     "is_top_level": true,
     "variables": {
-      "APP_ID_ANDROID": "ca-app-pub-1948728148006217~1719776431"
+      "APP_ID_ANDROID": "ca-app-pub-1948728148006217~1719776431",
+      "PLAY_SERVICES_VERSION": "22.1.0"
     }
   },
   "cordova-plugin-foreground-service": {
@@ -47,6 +48,14 @@
       "id": "cordova-plugin-notifications-permission"
     },
     "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-androidx-build": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-androidx-build"
+    },
+    "is_top_level": false,
     "variables": {}
   }
 }
