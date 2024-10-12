@@ -24,6 +24,7 @@ var angel_flag = 0;
 
 var volume;
 
+var freq;
 var beat_freq_1;
 var beat_freq_2;
 var single_tone_freq;
@@ -77,12 +78,15 @@ var boolVelvet = 0;
 var boolOrange = 0;
 var boolSineMonaural = 0;
 var boolRifeMonaural = 0;
+var boolALTMonaural = 0;
 var boolSine3D = 0;
 var boolRife3D = 0;
 var boolSine3Dauto = 0;
 var boolRife3Dauto = 0;
+var boolALT3dauto = 0;
 var boolYellow = 0;
 var boolTurquoise = 0;
+var bool_mind_machine_binaural = 0;
 var x_value;
 var y_values;
 var z_values;
@@ -106,6 +110,8 @@ var panning_model = 'HRTF'; // used in binaural and 3D sounds
 
   var cards = document.querySelectorAll(".card");
 
+  var volume_box = document.querySelector(".volume-box");
+
   // Define a variable to store the animation duration
   var duration = 0.01;
   
@@ -127,6 +133,12 @@ function start_dreamachine(freq) {
       cards[i].classList.add("flicker");
       cards[i].style.animationDuration = duration + "s";
     }
+
+    if(volume_box){
+      volume_box.classList.add("flicker");
+      volume_box.style.animationDuration = duration + "s";
+    }
+    
   }else {
     stop_dreamachine();
     start_dreamachine(freq);
@@ -137,11 +149,14 @@ function stop_dreamachine() {
   if(dreamachine_flag == 1 ){
   dreamachine_flag = 0;
     // Remove the flicker class from the body element
-  body.classList.remove("flicker");
-  for (var i = 0; i < cards.length; i++) {
-    // remove the class "flicker" to each element
-    cards[i].classList.remove("flicker");
-  }
+    body.classList.remove("flicker");
+    for (var i = 0; i < cards.length; i++) {
+      // remove the class "flicker" to each element
+      cards[i].classList.remove("flicker");
+    }
+    if (volume_box){
+      volume_box.classList.remove("flicker");
+    }
   }
 }
 
@@ -248,7 +263,7 @@ function adjustFrequency(frequency) {
 }
 
 function play_single_tone(freq, oscillator_type) {
-  single_tone_freq = freq;
+  single_tone_freq = adjustFrequency(freq);
 
   if (single_tone_flag == 0 ) {
     stop_all();
@@ -329,10 +344,9 @@ function play_binaural(freq1, freq2){
     beat_freq_2 = freq2;
   
     if (binaural_flag == 0){
-    stop_all();
-    binaural_flag = 1;
+      binaural_flag = 1;
      
-    play_double_tone(beat_freq_1, beat_freq_2, 'sine', 'binaural');
+      play_double_tone(beat_freq_1, beat_freq_2, 'sine', 'binaural');
       
   }else {
     stop_binaural();
@@ -345,8 +359,8 @@ function play_double_tone (freq1, freq2, form, deviation) {
   if (double_tone_flag == 0) {
     double_tone_flag = 1;
 
-    beat_freq_1 = freq1;
-    beat_freq_2 = freq2;
+    beat_freq_1 = adjustFrequency(freq1);
+    beat_freq_2 = adjustFrequency(freq2);
     deviation_type = deviation;
     oscillator_type = form;
     double_tone_oscillator_1 = audioCtx.createOscillator();
@@ -738,6 +752,15 @@ function distributePoints(n) {
   return points;
 }
 
+function play_ALT_3d_auto(tone_freq_array){
+  if(boolALT3dauto == 0){
+    boolALT3dauto = 1;
+    play_sine_3d_auto(tone_freq_array);
+  }else {
+    stop_ALT_3d_auto();
+    play_ALT_3d_auto(tone_freq_array);
+  }
+}
 
 function play_rife_3d_auto(tone_freq_array) {
   if (boolRife3Dauto == 0){
@@ -752,24 +775,43 @@ function play_rife_3d_auto(tone_freq_array) {
 function play_sine_3d_auto(tone_freq_array) {
 
   if (boolSine3Dauto ==  0 ) {
-    
+
     boolSine3Dauto = 1;
-  
-    var auto_matrix = distributePoints(tone_freq_array.length);
+
+    if(tone_freq_array.length == 1 && tone_freq_array[0] < 63 ){
+
+      play_binaural(174, 174+tone_freq_array[0]);
+
+    }else {
+
+      var auto_matrix = distributePoints(tone_freq_array.length);
 
   //  console.log(auto_matrix);
 
-    x_values = auto_matrix[0];
-    y_values = auto_matrix[1];
-    z_values = auto_matrix[2];
+      x_values = auto_matrix[0];
+      y_values = auto_matrix[1];
+      z_values = auto_matrix[2];
 
-  //  console.log(x_values);
-  //  console.log(y_values);
-  //  console.log(z_values);
-    play_sine_3d(tone_freq_array, x_values, y_values, z_values);
+      //  console.log(x_values);
+      //  console.log(y_values);
+      //  console.log(z_values);
+      play_sine_3d(tone_freq_array, x_values, y_values, z_values);
+
+    }
+    
   } else {
     stop_sine_3d_auto();
     play_sine_3d_auto(tone_freq_array);
+  }
+}
+
+function play_ALT_monaural(tone_freq_array) {
+  if (boolALTMonaural == 0) {
+    boolALTMonaural = 1;
+    play_sine_monaural(tone_freq_array);
+  }else {
+    stop_ALT_Monaural();
+    play_ALT_monaural(tone_freq_array);
   }
 }
 
@@ -787,18 +829,26 @@ function play_sine_monaural(tone_freq_array) {
     if (boolSineMonaural == 0) {
       stop_all();
       boolSineMonaural = 1;
+
+      if(tone_freq_array.length == 1 && tone_freq_array[0] < 63 ){
+
+        play_monaural(174, 174+tone_freq_array[0]);
+  
+      }else {
+  
       
-      x_values = [];
-      y_values = [];
-      z_values = [];
+        x_values = [];
+        y_values = [];
+        z_values = [];
 
-      for (var i = 0; i < tone_freq_array.length; i++) {
-        x_values.push(0);
-        y_values.push(0);
-        z_values.push(0);
+        for (var i = 0; i < tone_freq_array.length; i++) {
+          x_values.push(0);
+          y_values.push(0);
+          z_values.push(0);
+        }
+
+        play_sine_3d(tone_freq_array, x_values, y_values, z_values);
       }
-
-      play_sine_3d(tone_freq_array, x_values, y_values, z_values);
     } else {
       stop_sine_monaural();
       play_sine_monaural(tone_freq_array);
@@ -930,6 +980,23 @@ function play_sine_3d(tone_freq_array, x_values, y_values, z_values) {
   }
 }
 
+function play_mind_machine_binaural(freq1, freq2){
+
+  if (bool_mind_machine_binaural == 0) {
+
+    bool_mind_machine_binaural = 1;
+
+    var freq = Math.abs(freq2 - freq1);
+    play_binaural(freq1, freq2);
+    start_dreamachine(freq);
+
+  } else {
+    stop_mind_machine_binaural();
+    play_mind_machine_binaural(freq1, freq2);
+  }
+
+}
+
 function stop_double_tone() {
   if(double_tone_flag == 1){
     double_tone_flag = 0;
@@ -963,6 +1030,16 @@ function stop_sq_monaural(){
   if(sq_monaural_flag == 1){
     sq_monaural_flag = 0;
     stop_double_tone();
+  }
+}
+
+function stop_mind_machine_binaural(){
+  if (bool_mind_machine_binaural == 1 ){
+    
+    stop_binaural();
+    stop_dreamachine();
+
+    bool_mind_machine_binaural = 0;
   }
 }
 
@@ -1000,6 +1077,7 @@ function stop_white_noise() {
     boolWhite = 0;
     whiteNoiseNodeGain.disconnect();
   }
+  stop_all();
 }
 
 function stop_pink_noise() {
@@ -1007,6 +1085,7 @@ function stop_pink_noise() {
     boolPink = 0;
     pinkNoiseNodeGain.disconnect();
   }
+  stop_all();
 }
 
 function stop_brown_noise() {
@@ -1014,6 +1093,7 @@ function stop_brown_noise() {
       boolBrown = 0;
       brownNoiseNodeGain.disconnect();
   }
+  stop_all();
 }
 
 function stop_red_noise() {
@@ -1021,6 +1101,7 @@ function stop_red_noise() {
       boolRed = 0;
       redNoiseNodeGain.disconnect();
   }
+  stop_all();
 }
 
 function stop_black_noise() {
@@ -1028,6 +1109,7 @@ function stop_black_noise() {
       boolBlack = 0;
       blackNoiseNodeGain.disconnect();
   }
+  stop_all();
 }
 
 function stop_green_noise() {
@@ -1035,6 +1117,7 @@ function stop_green_noise() {
       boolGreen = 0;
       greenNoiseNodeGain.disconnect();
   }
+  stop_all();
 }
 
 function stop_blue_noise() {
@@ -1042,6 +1125,7 @@ function stop_blue_noise() {
       boolBlue = 0;
       blueNoiseNodeGain.disconnect();
   }
+  stop_all();
 }
 
 
@@ -1050,6 +1134,7 @@ function stop_violet_noise() {
       boolViolet = 0;
       violetNoiseNodeGain.disconnect();
   }
+  stop_all();
 }
 
 function stop_grey_noise() {
@@ -1057,6 +1142,7 @@ function stop_grey_noise() {
       boolGrey = 0;
       greyNoiseNodeGain.disconnect();
   }
+  stop_all();
 }
 
 function stop_velvet_noise() {
@@ -1064,6 +1150,7 @@ function stop_velvet_noise() {
       boolVelvet = 0;
       velvetNoiseNodeGain.disconnect();
   }
+  stop_all();
 }
 
 function stop_orange_noise() {
@@ -1071,6 +1158,7 @@ function stop_orange_noise() {
     boolOrange = 0;
     orangeNoiseNodeGain.disconnect();
   }
+  stop_all();
 }
 
 function stop_yellow_noise() {
@@ -1078,6 +1166,7 @@ function stop_yellow_noise() {
     boolYellow = 0;
     yellowNoiseNodeGain.disconnect();
   }
+  stop_all();
 }
 
 function stop_turquoise_noise() {
@@ -1085,6 +1174,7 @@ function stop_turquoise_noise() {
     boolTurquoise = 0;
     turquoiseNoiseNodeGain.disconnect();
   }
+  stop_all();
 }
 
 function stop_isochronic() {
@@ -1096,11 +1186,10 @@ function stop_isochronic() {
   }
 }
 
-function stop_rife() {
-  stop_rife();
-}
 
 function stop_sine(){
+
+  console.log("these are sine oscillators" + sine_oscillators);
    // Check if there is an audio context and oscillators stored in global variables
    if (audioCtx && sine_oscillators) {
 
@@ -1110,6 +1199,16 @@ function stop_sine(){
     }
   }
   
+}
+
+function stop_ALT_3d_auto(){
+  boolALT3dauto = 0;
+  stop_sine_3d_auto();
+}
+
+function stop_ALT_monaural(){
+  boolALTMonaural = 0;
+  stop_sine_monaural();
 }
 
 function stop_rife_3d() {
@@ -1129,6 +1228,7 @@ function stop_rife_monaural() {
 
 function stop_sine_monaural() {
   stop_sine();
+  stop_monaural();
   boolSineMonaural = 0;
 }
 
@@ -1139,6 +1239,7 @@ function stop_rife_3d_auto() {
 
 function stop_sine_3d_auto() {
   stop_sine();
+  stop_binaural();
   boolSine3Dauto = 0;
 }
 
@@ -1176,6 +1277,12 @@ function play_sq_monaural_generator(){
   play_sq_monaural(freq1, freq2);
 }
 
+function play_mind_machine_binaural_generator(){
+  var freq1 = $("#freq1").val();
+  var freq2 = $("#freq2").val();
+  play_mind_machine_binaural(freq1, freq2);
+}
+
 function warning(whichy){
   switch(whichy) {
     case 0: 
@@ -1206,7 +1313,10 @@ function warning(whichy){
       alert("Disclaimer: These healing frequencies are not a substitute for professional medical care. Use them at your own risk and discretion. \n\n Note: For really high or low frequencies you would need special speakers/headphones/earphones to play them.");
       break;
     case 10:
-      alert("Instructions: \n 1. Sit in quite place \n 2. Observe the rotating symbol \n 3. Tap on the rotating symbol to start the program \n 4. Listen to the frequencies and sound. \n 5. It is recommended to use earphones. \n 6. After awakening no need to observe the symbol, just listen to the frequencies. \n 7. Tap the rotating symbol to pause session. \n 8. Double Tap on rotating symbol to stop session.");
+      alert("Instructions: \n 1. Sit in quite place \n 2. Observe the rotating symbol \n 3. Tap on the rotating symbol to start the program \n 4. Listen to the frequencies and sounds. \n 5. It is recommended to use earphones. \n 6. After awakening no need to observe the symbol, just listen to the frequencies. \n 7. Tap the rotating symbol to pause session. \n 8. Double Tap on rotating symbol to stop session.");
+      break;
+    case 11:
+      alert("Lower your volume and use headphones! Sit in a dark room. Set the desired frequency, keep it in front of your eyes, play the mind machine generator and CLOSE YOUR EYES!")
       break;
     default:
       alert("Something went wrong.. reopen please.");
@@ -1235,7 +1345,8 @@ function live_volume_set(){
     angel_flag == 1 || boolSineMonaural == 1 || boolSine3D == 1 || 
     boolSine3Dauto == 1 || boolRife3Dauto == 1 || boolRifeMonaural == 1 || 
     boolRife3D == 1 || monaural_flag == 1 || binaural_flag == 1 || 
-    sq_monaural_flag == 1 || double_tone_flag == 1 || kundalini_flag == 1 ){
+    sq_monaural_flag == 1 || double_tone_flag == 1 || kundalini_flag == 1 || 
+    boolALT3dauto == 1 || boolALTMonaural == 1 || bool_mind_machine_binaural == 1){
 
    if(volume.gain.value != undefined) {
     console.log("controling volumes")
@@ -1333,4 +1444,7 @@ function stop_all() {
   if (boolRife3Dauto == 1 ) { stop_rife_3d_auto(); }
   if (boolRifeMonaural == 1 ) { stop_rife_monaural(); }
   if (boolRife3D ==  1) { stop_rife_3d(); }
+  if (boolALT3dauto == 1) { stop_ALT_3d_auto(); }
+  if (boolALTMonaural == 1) { stop_ALT_monaural(); }
+  if (bool_mind_machine_binaural == 1) { stop_mind_machine_binaural(); }
 }
