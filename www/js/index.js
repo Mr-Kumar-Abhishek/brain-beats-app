@@ -79,7 +79,7 @@ async function onDeviceReady() {
               theme: lastResortTheme
           }
       );  
-      
+  /*    
       banner = new admob.BannerAd({
         adUnitId: 'ca-app-pub-3940256099942544/6300978111',
       })
@@ -89,7 +89,7 @@ async function onDeviceReady() {
       })
     
       await banner.show()
-  
+  */
 }
 
 /*

@@ -26,19 +26,12 @@
     "plugins": {
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-background-mode": {},
-      "cordova-plugin-notifications-permission": {},
-      "community-admob-plus-cordova": {
-        "APP_ID_ANDROID": "ca-app-pub-1948728148006217~1719776431",
-        "PLAY_SERVICES_VERSION": "23.2.0"
-      }
+      "cordova-plugin-notifications-permission": {}
     },
     "platforms": [
       "browser",
       "electron",
       "android"
     ]
-  },
-  "dependencies": {
-    "community-admob-plus-cordova": "1.32.8"
   }
 }
