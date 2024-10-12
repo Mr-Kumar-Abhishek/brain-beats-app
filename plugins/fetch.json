@@ -34,14 +34,6 @@
       "PLAY_SERVICES_VERSION": "22.1.0"
     }
   },
-  "cordova-plugin-foreground-service": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-foreground-service"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "cordova-plugin-notifications-permission": {
     "source": {
       "type": "registry",
