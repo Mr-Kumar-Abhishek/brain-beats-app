@@ -11,9 +11,11 @@
 
 // Wait for the deviceready event before using any of Cordova's device APIs.
 // See https://cordova.apache.org/docs/en/latest/cordova/events/events.html#deviceready
+let banner;
+
 document.addEventListener('deviceready', onDeviceReady, false);
 
-function onDeviceReady() {
+async function onDeviceReady() {
     // Cordova is now initialized. Have fun!
 
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
@@ -76,11 +78,23 @@ function onDeviceReady() {
               cancelButton: lastResortCancelButton,
               theme: lastResortTheme
           }
-      );
-
+      );  
+      
+      banner = new admob.BannerAd({
+        adUnitId: 'ca-app-pub-3940256099942544/6300978111',
+      })
     
+      banner.on('impression', async (evt) => {
+        await banner.hide()
+      })
+    
+      await banner.show()
   
 }
+
+/*
+
+// example code of ads 
 
 let banner
 console.log("device prepared from index");
@@ -100,3 +114,4 @@ document.addEventListener('deviceready', async () => {
 navigator.splashscreen.hide();
 
 
+*/
