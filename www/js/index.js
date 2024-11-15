@@ -17,7 +17,7 @@ document.addEventListener('deviceready', onDeviceReady, false);
 
 async function onDeviceReady() {
     // Cordova is now initialized. Have fun!
-
+   await admob.start();
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
 
     /* Your code. (Make sure to not alert(status) until splashscreen
@@ -78,19 +78,20 @@ async function onDeviceReady() {
               cancelButton: lastResortCancelButton,
               theme: lastResortTheme
           }
-      );  
-  /*    
-      banner = new admob.BannerAd({
-        adUnitId: 'ca-app-pub-3940256099942544/6300978111',
-      })
-    
-      banner.on('impression', async (evt) => {
-        await banner.hide()
-      })
-    
-      await banner.show()
-  */
-}
+      );
+  banner = new admob.BannerAd({
+    adUnitId: 'ca-app-pub-3940256099942544/6300978111',
+    position: 'bottom'
+  })
+  console.log(banner);
+  banner.on('impression', async (evt) => {
+    await banner.hide()
+  })
+
+  await banner.load();
+ await banner.show();
+
+ }
 
 /*
 
