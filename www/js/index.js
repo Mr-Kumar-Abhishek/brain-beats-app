@@ -92,6 +92,14 @@ async function onDeviceReady() {
   await banner.load();
   await banner.show();
 
+
+  function destroyBannerAd() {
+    if (banner) {
+      banner.hide();
+      console.log('AdMob Banner destroyed');
+    }
+  }
+  window.addEventListener('beforeunload', destroyBannerAd);
 }
 
 /*
