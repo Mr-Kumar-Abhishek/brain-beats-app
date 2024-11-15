@@ -26,7 +26,7 @@
   "cordova-plugin-notifications-permission": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-notifications-permission"
+      "id": "cordova-plugin-notifications-permission@^0.0.31"
     },
     "is_top_level": true,
     "variables": {}
@@ -38,5 +38,15 @@
     },
     "is_top_level": false,
     "variables": {}
+  },
+  "admob-plus-cordova": {
+    "source": {
+      "type": "registry",
+      "id": "admob-plus-cordova"
+    },
+    "is_top_level": true,
+    "variables": {
+      "APP_ID_ANDROID": "ca-app-pub-3940256099942544~3347511713"
+    }
   }
 }
