@@ -28,7 +28,7 @@
       "cordova-plugin-background-mode": {},
       "cordova-plugin-notifications-permission": {},
       "admob-plus-cordova": {
-        "APP_ID_ANDROID": "ca-app-pub-3940256099942544~3347511713",
+        "APP_ID_ANDROID": "ca-app-pub-1948728148006217~1719776431",
         "PLAY_SERVICES_VERSION": "23.0.0"
       }
     },
