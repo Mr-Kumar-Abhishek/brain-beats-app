@@ -91,7 +91,7 @@ var x_value;
 var y_values;
 var z_values;
 
-var k_arr = [63, 174, 285, 396, 417, 528, 549.21, 618, 639, 669, 741, 762, 831, 852, 963, 1074, 1185, 1296, 1407, 1518, 1629, 1740, 1851, 1782, 1803, 1962, 2073, 2184, 2295, 2406, 2517, 2628, 2739, 2850, 2961];
+var k_arr = [63, 174, 285, 396, 417, 528, 549.21, 618, 639, 669, 741, 762, 831, 852, 963, 1074, 1185, 1296, 1407, 1518, 1629, 1740, 1782, 1803, 1851, 1953, 1962, 1974, 2073, 2085, 2184, 2295, 2406, 2517, 2628, 2739, 2850, 2196, 2961];
 var kundalini_flag = 0;
 var k_indexer = 0;
 
@@ -985,8 +985,12 @@ function play_mind_machine_binaural(freq1, freq2){
   if (bool_mind_machine_binaural == 0) {
 
     bool_mind_machine_binaural = 1;
-
     var freq = Math.abs(freq2 - freq1);
+
+    if (freq == 0) {
+      freq = freq1;
+    }
+    
     play_binaural(freq1, freq2);
     start_dreamachine(freq);
 
