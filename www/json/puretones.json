@@ -7,6 +7,13 @@
       "data_id":"a2u69fpto"
    },
    {
+      "data_name":"136.10 hz - Pure Tone",
+      "data_description":"A pure tone at 136.10 Hz is associated with the heart chakra. This frequency is believed to promote emotional healing, compassion, and love, helping to balance and open the heart chakra. Listening to this pure tone can enhance feelings of empathy and inner peace.",
+      "data_start":"play_pure_tone(136.10);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"a2u69fptp"
+   },
+   {
       "data_name":"141.27 hz - Pure Tone",
       "data_description":"This is for Vishudda/Throat chakra. This throat chakra meditation gives physical enhancements of giving strength in nasal area, against irritated sinuses, sore throat, jaw pain, voice loss, thyroid problems, teeth and gum problems, ailments of esophagus and tonsils.Provides intellectuality and mobility. Frequency is associated with orbit of Mercury. Note is C# or D. Color is blue-green or blue.  This chakra supports speech center and affects communicative-intellectual principle. It is associated with communication and cleverness. It tries to remove, nervousness, anxiety, fear, attention deficit disorder, poor coping skills, and feeling of isolation.",
       "data_start":"play_pure_tone(141.27);",
@@ -35,6 +42,13 @@
       "data_id":"bklqdog5l"
    },
    {
+      "data_name":"194.18 hz - Pure Tone",
+      "data_description":"A pure tone at 194.18 Hz is often associated with the root chakra, which is located at the base of the spine. This frequency is believed to help ground and stabilize one's energy, promoting feelings of security, safety, and connection to the earth. Using this pure tone in meditation or sound therapy can enhance the balance and alignment of the root chakra, contributing to overall physical and emotional well-being.",
+      "data_start":"play_pure_tone(194.18);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"bklqdog5m"
+   },
+   {
       "data_name":"210.42 hz - Pure Tone",
       "data_description":"Synodic Moon Frequency. Musical Note is G#. Aura color is orange. Associated with Svadisthan Chakra. It regulates menstruation and rectifies disturbances in gland and lymph system. Other minor effects include simulation of sexual energy and supports erotic communication. (It is designed for females.)",
       "data_start":"play_pure_tone(210.42);",
@@ -42,11 +56,25 @@
       "data_id":"o9moi622h"
    },
    {
+      "data_name":"221.23 hz - Pure Tone",
+      "data_description":"A pure tone at 221.23 Hz is linked to the ajna chakra, also known as the third eye chakra. This frequency is believed to enhance intuition, insight, and inner wisdom. It helps in balancing and activating the ajna chakra, which is located between the eyebrows. Using this pure tone in meditation or sound therapy can support mental clarity and spiritual awareness",
+      "data_start":"play_pure_tone(221.23);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"o9moi622i"
+   },
+   {
       "data_name":"256 hz - Pure Tone",
       "data_description":"Pure Tone for root chakra (muladhara) for meditation [phase 1]. Physical enhancement by muladahara, gives strength for lower back pain, scaitica, varicose viens, constipation, diarrhea, rectal or anal problems, problems with groin, hips, legs, knees, calves, ankles and feet. It is related to survival, security and being closest to earth. Associated with colour red and the element earth. It rests at the base of the spine. It tries to remove loneliness, insecurities, feeling ungrounded, unconfidence, abandonment, indecisiveness, depressed states, anxious states, addictions, phobias and obsessions. It is also frequency for zodiac sign Aries (V2) to meditate for balance and relaxation.",
       "data_start":"play_pure_tone(256);",
       "data_stop":"stop_pure_tone();",
       "data_id":"h0oeh39d7"
+   },
+   {
+      "data_name":"258 hz - Pure Tone",
+      "data_description":"This sound frequency is specifically designed to resonate with the root chakra [Phase 2], providing a grounding and stabilizing effect. It promotes a sense of security and balance, helping to anchor your energy to the Earth's vibrations.",
+      "data_start":"play_pure_tone(258);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"i0oeh39d7"
    },
    {
       "data_name":"259 hz - Pure Tone",
@@ -70,6 +98,13 @@
       "data_id":"k8s8qxmzb0"
    },
    {
+      "data_name":"272.10 hz - Pure Tone",
+      "data_description":"A pure tone at 272.10 Hz is associated with the soul heart chakra. This frequency is believed to deepen the connection to one's higher self and spiritual essence. Listening to this pure tone can enhance emotional and spiritual harmony, promoting inner peace and unconditional love.",
+      "data_start":"play_pure_tone(272.10);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"k8s8qxmzb1"
+   },
+   {
       "data_name":"277.18 hz - Pure Tone",
       "data_description":"Pure Tone for Taurus. Taurus could use this for relaxation, meditation or study. Musical Note is C#",
       "data_start":"play_pure_tone(277.18);",
@@ -82,6 +117,13 @@
       "data_start":"play_pure_tone(282);",
       "data_stop":"stop_pure_tone();",
       "data_id":"eis8iawng"
+   },
+   {
+      "data_name":"285 hz - Pure Tone",
+      "data_description":"This frequency is aligned with the sacral chakra, which is associated with creativity, emotions, and intimacy. The pure tone of 285 Hz helps to rejuvenate and balance the sacral chakra, promoting emotional health and creative expression. Keep in mind it also resonates with lower root chakra and is one of the solfeggio frequencies.",
+      "data_start":"play_pure_tone(285);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"fis8iawng"
    },
    {
       "data_name":"288 hz - Pure Tone",
@@ -133,6 +175,13 @@
       "data_id":"naknevi9be"
    },
    {
+      "data_name":"325 hz - Pure Tone",
+      "data_description":"This pure tone resonates at 325 Hz, a frequency often associated with the solar plexus chakra. It's a soothing, clear tone that aims to balance and energize this vital energy center, believed to be the seat of personal power, confidence, and willpower. Ideal for meditation, sound therapy, or background ambiance, this tone can help promote a sense of inner strength and clarity.",
+      "data_start":"play_pure_tone(325);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"naknevi9bf"
+   },
+   {
       "data_name":"329.63 hz - Pure Tone",
       "data_description":"Pure tone for Leo. Leo can use this for relaxation, meditation or study. Musical Note is E",
       "data_start":"play_pure_tone(329.63);",
@@ -159,6 +208,13 @@
       "data_start":"play_pure_tone(341.3);",
       "data_stop":"stop_pure_tone();",
       "data_id":"hcrkvvhht"
+   },
+   {
+      "data_name":"343 hz - Pure Tone",
+      "data_description":"This pure tone resonates at 343 Hz, a frequency often associated with the heart chakra. Known for its soothing and harmonizing qualities, this tone is designed to balance and heal the heart chakra, which is central to love, compassion, and emotional well-being. Whether used in meditation, sound therapy, or as calming background sound, this pure tone can help foster a sense of inner peace and emotional connection.",
+      "data_start":"play_pure_tone(343);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"hcrkvvhhu"
    },
    {
       "data_name":"349.23 hz - Pure Tone",
@@ -194,6 +250,13 @@
       "data_start":"play_pure_tone(377);",
       "data_stop":"stop_pure_tone();",
       "data_id":"iae4mljd7e"
+   },
+   {
+      "data_name":"383 hz - Pure Tone",
+      "data_description":"The 383 Hz pure tone is a powerful frequency associated with the throat chakra, known as Vishuddha in Sanskrit. This tone is believed to help clear and balance the energy center located at the throat, which governs communication, expression, and truth. When tuned into this frequency, the sound waves resonate deeply within the throat, promoting a sense of calm and clarity. It encourages the free flow of expression, helping one to communicate more effectively and authentically. Perfect for meditation and sound healing practices, this pure tone can assist in unlocking one's true voice and inner wisdom.",
+      "data_start":"play_pure_tone(383);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"iae4mljd7f"
    },
    {
       "data_name":"384 hz - Pure Tone",
@@ -246,7 +309,7 @@
    },
    {
       "data_name":"432 hz - Pure Tone",
-      "data_description":"Pure tone for heart chakra and capricorn (V2). This frequency is associated with a movement to shift away from the standard tuning of 440 hz of note A to 432 hz of note A. Music played on 432 hz tuning is more pleasant, cheerful and easier on ears. It also is good for meditation for relaxed states as it resonates with heart chakra. This frequency was used by ancient greeks, ancient egyptians and some classical music such as of mozart and Giuseppe Verdi. Capricorn can use this for meditation, relaxation and balancing.",
+      "data_description":"Pure tone for heart chakra and capricorn (V2). This frequency is associated with a movement to shift away from the standard tuning of 440 hz of note A to 432 hz of note A. Music played on 432 hz tuning is more pleasant, cheerful and easier on ears. It also is good for meditation for relaxed states as it resonates with heart chakra. This frequency was used by ancient greeks, ancient egyptians and some classical music such as of mozart and Giuseppe Verdi. Capricorn can use this for meditation, relaxation and balancing. This frequency also resonates with 3rd eye, providing a basis of merge of heart chakra and 3rd eye insights.",
       "data_start":"play_pure_tone(432);",
       "data_stop":"stop_pure_tone();",
       "data_id":"rodw6cg6r"
@@ -292,6 +355,13 @@
       "data_start":"play_pure_tone(480);",
       "data_stop":"stop_pure_tone();",
       "data_id":"tguhjtiva"
+   },
+   {
+      "data_name":"486 hz - Pure Tone",
+      "data_description":"The 486 Hz pure tone is a mystical frequency associated with the crown chakra, known as Sahasrara in Sanskrit. This tone is believed to aid in the expansion of consciousness and spiritual enlightenment. When attuned to the 486 Hz frequency, the vibrations can help to open and harmonize the crown chakra, promoting a deeper connection to the universe and a sense of unity with all existence. Ideal for meditation and spiritual practices, this pure tone encourages inner peace and the realization of one's highest self, allowing for profound spiritual growth and awareness.",
+      "data_start":"play_pure_tone(486);",
+      "data_stop":"stop_pure_tone();",
+      "data_id":"tguhjtivb"
    },
    {
       "data_name":"493.88 hz - Pure Tone",
