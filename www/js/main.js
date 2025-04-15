@@ -424,7 +424,7 @@ async function kundalini_rotator() {
     if(k_indexer == k_arr.length) {
       k_indexer = 0;
     }
-    if ($(".yin-yang").val() == 0) {
+    if ($(".yin-yang").data('state') == 0) {
       break;
     }
     play_kundalini(k_arr[k_indexer]);
@@ -1057,18 +1057,18 @@ function stop_kundalini() {
 }
 
 function kundalini_halter() {
-  $(".yin-yang").val(0);
+  $(".yin-yang").data('state', 0);
   stop_kundalini();
   k_indexer = 0;
 }
 
 
 function kundalini_toggler(){
-  if ( $(".yin-yang").val() == 0) {
-    $(".yin-yang").val(1); 
+  if ( $(".yin-yang").data('state') == 0) {
+    $(".yin-yang").data('state', 1); 
     kundalini_rotator();
-  }else if ($(".yin-yang").val() == 1) {
-    $(".yin-yang").val(0);
+  }else if ($(".yin-yang").data('state') == 1) {
+    $(".yin-yang").data('state', 0);
     stop_kundalini();
     k_indexer--;
   }
@@ -1287,49 +1287,6 @@ function play_mind_machine_binaural_generator(){
   play_mind_machine_binaural(freq1, freq2);
 }
 
-function warning(whichy){
-  switch(whichy) {
-    case 0: 
-       alert("Lower your volume !!");
-       break;
-    case 1:
-       alert("Lower your volume and use headphones !");
-       break;
-    case 3:
-      alert("Sit in a dark room. Set the desired frequency, keep it in front of your eyes, play the dreamachine generator and CLOSE YOUR EYES!");
-      break;
-    case 4:
-      alert("Sit in a dark room, choose a preset, keep it in front of your eyes, play it and CLOSE YOUR EYES!")
-      break;    
-    case 5:
-      alert("The minimum and maximum values of x y and z co-ordinates is -1 and 1. You could use decimals. And you already know the minimum and maximum values for frequency (20 hz - 22000)");
-      break;
-    case 6:
-      alert("Use of headphones/earphones is required. If you don't like the auto adjustment of frequencies, stop and play again, without changing the frequencies, the brain beats will try to adjust it again.");
-      break;
-    case 7:
-      alert("Use of headphones/earphones is required.If you don't like the auto adjustment of frequencies, stop and play again, without changing from your opted the frequencies, the brain beats will try to adjust it again. \n\nDisclaimer: These healing frequencies are not a substitute for professional medical care. Use them at your own risk and discretion.");
-      break;
-    case 8:
-      alert("Disclaimer: These healing frequencies are not a substitute for professional medical care. Use them at your own risk and discretion.");
-      break;
-    case 9:
-      alert("Disclaimer: These healing frequencies are not a substitute for professional medical care. Use them at your own risk and discretion. \n\n Note: For really high or low frequencies you would need special speakers/headphones/earphones to play them.");
-      break;
-    case 10:
-      alert("Instructions: \n 1. Sit in quite place \n 2. Observe the rotating symbol \n 3. Tap on the rotating symbol to start the program \n 4. Listen to the frequencies and sounds. \n 5. It is recommended to use earphones. \n 6. After awakening no need to observe the symbol, just listen to the frequencies. \n 7. Tap the rotating symbol to pause session. \n 8. Double Tap on rotating symbol to stop session.");
-      break;
-    case 11:
-      alert("Lower your volume and use headphones! Sit in a dark room. Set the desired frequency, keep it in front of your eyes, play the mind machine generator and CLOSE YOUR EYES!")
-      break;
-    default:
-      alert("Something went wrong.. reopen please.");
-    }
-
-      
-}
-
-
 function toggle_volume(){
   if (isochronic_flag == 1) {
     if ( toggle_flag == 0) {
@@ -1452,3 +1409,84 @@ function stop_all() {
   if (boolALTMonaural == 1) { stop_ALT_monaural(); }
   if (bool_mind_machine_binaural == 1) { stop_mind_machine_binaural(); }
 }
+
+
+function warning(whichy){
+  switch(whichy) {
+    case 0: 
+       alert("Lower your volume !!");
+       break;
+    case 1:
+       alert("Lower your volume and use headphones !");
+       break;
+    case 3:
+      alert("Sit in a dark room. Set the desired frequency, keep it in front of your eyes, play the dreamachine generator and CLOSE YOUR EYES!");
+      break;
+    case 4:
+      alert("Sit in a dark room, choose a preset, keep it in front of your eyes, play it and CLOSE YOUR EYES!")
+      break;    
+    case 5:
+      alert("The minimum and maximum values of x y and z co-ordinates is -1 and 1. You could use decimals. And you already know the minimum and maximum values for frequency (20 hz - 22000)");
+      break;
+    case 6:
+      alert("Use of headphones/earphones is required. If you don't like the auto adjustment of frequencies, stop and play again, without changing the frequencies, the brain beats will try to adjust it again.");
+      break;
+    case 7:
+      alert("Use of headphones/earphones is required.If you don't like the auto adjustment of frequencies, stop and play again, without changing from your opted the frequencies, the brain beats will try to adjust it again. \n\nDisclaimer: These healing frequencies are not a substitute for professional medical care. Use them at your own risk and discretion.");
+      break;
+    case 8:
+      alert("Disclaimer: These healing frequencies are not a substitute for professional medical care. Use them at your own risk and discretion.");
+      break;
+    case 9:
+      alert("Disclaimer: These healing frequencies are not a substitute for professional medical care. Use them at your own risk and discretion. \n\n Note: For really high or low frequencies you would need special speakers/headphones/earphones to play them.");
+      break;
+    case 10:
+      alert("Instructions: \n 1. Sit in quite place \n 2. Observe the rotating symbol \n 3. Tap on the rotating symbol to start the program \n 4. Listen to the frequencies and sounds. \n 5. It is recommended to use earphones. \n 6. After awakening no need to observe the symbol, just listen to the frequencies. \n 7. Tap the rotating symbol to pause session. \n 8. Double Tap on rotating symbol to stop session.");
+      break;
+    case 11:
+      alert("Lower your volume and use headphones! Sit in a dark room. Set the desired frequency, keep it in front of your eyes, play the mind machine generator and CLOSE YOUR EYES!")
+      break;
+    default:
+      alert("Something went wrong.. reopen please.");
+    }
+
+      
+}
+
+
+function disclaimer() {
+  document.addEventListener('DOMContentLoaded', () => {
+    // Get the modal element
+    const instructionModalElement = document.getElementById('instructionModal');
+    if (!instructionModalElement) {
+        console.error("Modal element #instructionModal not found!");
+        return; // Exit if modal doesn't exist
+    }
+
+    const myModal = new bootstrap.Modal(instructionModalElement, {
+      backdrop: 'static', // Prevents closing by clicking outside
+      keyboard: false    // Prevents closing with the Escape key
+    });
+
+    // --- Add this event listener ---
+    instructionModalElement.addEventListener('hidden.bs.modal', function (event) {
+      // Find the search input element
+      const searchInput = document.getElementById('search-me');
+      // If the search input exists, set focus to it
+      if (searchInput) {
+        searchInput.focus();
+      } else {
+        // Fallback: focus the body if search input isn't found for some reason
+        document.body.focus();
+      }
+    });
+    // --- End of added listener ---
+
+    // Show the modal
+    myModal.show();
+  });
+}
+
+// Make sure the disclaimer function is called somewhere if it wasn't already
+// (Though it seems to be called at the end of search.html)
+// disclaimer();
