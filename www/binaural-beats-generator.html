@@ -23,8 +23,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     >
-    <meta name="robot" content="index, follow" >
-    <meta name="robots" content="noarchive" >
+    <meta name="robots" content="index, follow, noarchive" >
     <meta
       name="subject"
       content="Binaural Beats | Brain Beats | Brainwave Entrainment"
@@ -100,10 +99,10 @@
               <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Single tones
               </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown5">
                 <li>
                   <a class="dropdown-item" href="solfeggio-frequency.html"
                     >Solfeggio Frequency</a
@@ -288,14 +287,18 @@
                   >Chat</a
                 >
                 </li>
-               
+                <li>
+                  <a class="dropdown-item" href="https://ko-fi.com/brainbeats"
+                  >Give Coffee</a
+                >
+                </li>
                 <li>
                   <a class="dropdown-item" href="/privacy-policy.html"
                   >Privacy Policy</a
                 >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="/blog/index.html"
+                  <a class="dropdown-item" href="https://brain-beats.in/blog/"
                   >Blog</a
                 >
                 </li>
@@ -380,6 +383,41 @@
       </div>
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="instructionModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel"> ~ Instructions ~</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <!-- Modal Body -->
+          <div class="modal-body">
+            <p>
+              <ol>
+                <li>Lower your volume and use headphones/earphones.</li>
+                <li>Input the two frequencies.</li>
+                <li>Play the binaural beats generator.</li>
+              </ol>
+            </p>
+            <h6>Note:</h6>
+            <p>
+              <ul>
+                <li>The binaural beats generator works with the difference of the two frequencies. The generator will produce a frequency which is the difference of two frequencies you enter.</li>
+                <li>The upper limit of individual frequency (of the two) which a human brain can detect binaural beats is till 1000 Hz.</p>
+                <li>The human hearing range is from 20 Hz to 20000 Hz. Individial frequencies should be in this range.</li>
+              </ul>
+            </p>
+          </div>
+          <!-- Modal Footer (Optional) -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="./js/jquery-3.6.0.slim.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
 
@@ -387,9 +425,7 @@
     <script src="./js/bootstrap-input-spinner.js"></script>
     <script src="./js/main.js"></script>
     <script>
-      $(warning(1));
+      disclaimer();
     </script>
-    <script src="cordova.js"></script>
-    <script defer src="./js/index.js"></script>
   </body>
 </html>

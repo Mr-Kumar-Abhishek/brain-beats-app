@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.amazon.rialto.cordova.webapp.webappc453f0fb01ba4ef4aaafe119a5921ead" version="1.0.1500000002" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+
     <name>brain beats</name>
     <description>Brain Beats is a brainwave entertainment portal containing programs of solfeggio frequency, binaural beats and monaural beats.p</description>
     <author email="mr.kumar.abhishek@email.com" href="https://cordova.apache.org">

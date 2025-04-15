@@ -18,8 +18,7 @@
       name="keywords"
       content="dreamachine, pure tones, brainwave, entertainment, monaural beats, monaural, binaural, beats, solfeggio, solfeggio tones, frequency"
     >
-    <meta name="robot" content="index, follow" >
-    <meta name="robots" content="noarchive" >
+    <meta name="robots" content="index, follow, noarchive" >
     
     <meta
       name="subject"
@@ -94,10 +93,10 @@
               <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Single tones
               </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown5">
                 <li>
                   <a class="dropdown-item" href="solfeggio-frequency.html"
                     >Solfeggio Frequency</a
@@ -277,14 +276,13 @@
                   >Chat</a
                 >
                 </li>
-               
                 <li>
                   <a class="dropdown-item" href="/privacy-policy.html"
                   >Privacy Policy</a
                 >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="/blog/index.html"
+                  <a class="dropdown-item" href="https://brain-beats.in/blog/"
                   >Blog</a
                 >
                 </li>
@@ -334,9 +332,44 @@
       </template>
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="instructionModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel"> ~ Instructions and Disclaimer ~</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <!-- Modal Body -->
+          <div class="modal-body">
+            <p>
+              <ol>
+                <li>Sit in a dark room.</li>
+                <li>Search for the desired frequency preset.</li>
+                <li>Keep it in front of your eyes.</li>
+                <li>Play the Dreamachine.</li>
+                <li>Lastly and the most important step, <strong>CLOSE YOUR EYES!</strong></li>
+              </ol>
+            </p>
+            <p><strong>Disclaimer:</strong> These healing frequencies are not a substitute for professional medical care. Use them at your own risk and discretion.</p>
+            <h6>Note:</h6>
+            <p>
+              <ul>
+                <li>On screen presets can be searched from the search bar in the navigation menu.</li>
+                <li>You could save these presets in favorites section by clicking on like (heart icon).</li>
+              </ul>
+            </p>
+          </div>
+          <!-- Modal Footer (Optional) -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-
-    <script defer>
+    <script>
       const jsonData = "./json/dreamachines.json";
     </script>
     <script src="./js/jquery-3.6.0.slim.min.js" ></script>
@@ -347,9 +380,9 @@
     <script src="./js/bootstrap-input-spinner.js"></script>
     <script src="./js/main.js"></script>
     <script>
-      warning(4);
+      disclaimer();
     </script>
     <script src="cordova.js"></script>
-    <script defer src="./js/index.js"></script>
-  </body>
+    <script defer src="js/index.js"></script>
+	</body>
 </html>
