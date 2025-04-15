@@ -34,7 +34,7 @@
         <icon src="res/icon/electron/brain-beats-netlify.png" target="installer" />
     </platform>
     <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/icon/android/xxxhdpi.png" />
-    <preference name="android-targetSdkVersion" value="35" />
+    <preference name="android-targetSdkVersion" value="34" />
     <preference name="SplashScreen" value="img/logo.png" />
     <preference name="SplashScreenDelay" value="5000" />
      <preference name="GradlePluginKotlinEnabled" value="true" />
