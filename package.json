@@ -13,7 +13,6 @@
   "author": "Abhishek Kumar",
   "license": "GPL-3",
   "devDependencies": {
-    "cordova-android": "^14.0.0",
     "cordova-androidx-build": "^1.0.4",
     "cordova-browser": "^7.0.0",
     "cordova-electron": "^3.1.0",
@@ -34,8 +33,7 @@
     },
     "platforms": [
       "browser",
-      "electron",
-      "android"
+      "electron"
     ]
   },
   "dependencies": {
