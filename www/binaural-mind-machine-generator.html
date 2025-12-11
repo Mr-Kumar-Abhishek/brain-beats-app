@@ -5,7 +5,7 @@
 		<meta charset="utf-8" >
 		<meta http-equiv="x-ua-compatible" content="ie=edge" >
 		<title>
-			Binaural Beats Generator | Brain Beats | Brainwave Entrainment
+			Binaural Mind Machine Generator | Brain Beats | Brainwave Entrainment
 		</title>
 		<meta
 			name="description"
@@ -26,7 +26,7 @@
 		<meta name="robots" content="index, follow, noarchive" >
 		<meta
 			name="subject"
-			content="Binaural Beats | Brain Beats | Brainwave Entrainment"
+			content="Binaural Mind Machine Generator | Brain Beats | Brainwave Entrainment"
 			>
 		<meta name="author" content="Abhishek Kumar" >
 		<meta name="coverage" content="Worldwide" >
@@ -44,7 +44,7 @@
 		<link rel="apple-touch-icon" href="./img/mandala-1757304_1280.png">
 		<meta
 			name="application-name"
-			content="Brain Beats | Binaural Beats Generator"
+			content="Brain Beats | Binaural Mind Machine Generator"
 			>
 		<meta name="twitter:card" content="summary" >
 		<meta name="twitter:title" content="brain beats | binaural mind machine generator" >
@@ -69,7 +69,7 @@
 			crossorigin="anonymous"></script>
 		<!-- Global site tag (gtag.js) - Google Ads: 645983156 -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-645983156"></script>
-		<script async src="./js/google-ads.js"></script>
+		<!-- google web ads -->
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script
 			async
@@ -169,6 +169,16 @@
 										>
 								</li>
 								<li>
+									<a class="dropdown-item" href="3d-bio-frequency.html"
+										>3D BIO frequencies</a
+										>
+								</li>
+								<li>
+									<a class="dropdown-item" href="monaural-bio-frequency.html"
+										>Monaural BIO frequencies</a
+										>
+								</li>
+								<li>
 									<a class="dropdown-item" href="dreamachine-presets.html"
 										>Dreamachine Presets</a
 										>
@@ -240,6 +250,11 @@
 										>Dreamachine Generator</a
 										>
 								</li>
+								<li>
+									<a class="dropdown-item" href="binaural-mind-machine-generator.html"
+										>Binaural Mind Machine Generator</a
+										>
+								</li>
 							</ul>
 						</li>
 						<li class="nav-item dropdown">
@@ -280,7 +295,7 @@
 										>Chat</a
 										>
 								</li>
-<!-- Ko-fi was here -->
+								 
 								<li>
 									<a class="dropdown-item" href="/privacy-policy.html"
 										>Privacy Policy</a
@@ -291,6 +306,7 @@
 										>Blog</a
 										>
 								</li>
+								<!-- webring was here -->
 							</ul>
 						</li>
 					</ul>
@@ -364,12 +380,278 @@
 					</div>
 				</div>
 				<!-- Modal -->
+				<div class="modal fade" id="freq1NegativeModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<!-- Modal Header -->
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalLabel"> ~ Error ~</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<!-- Modal Body -->
+							<div class="modal-body">
+								First frequency field can't be 0 or less.
+							</div>
+							<!-- Modal Footer (Optional) -->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="freq2NegativeModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<!-- Modal Header -->
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalLabel"> ~ Error ~</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<!-- Modal Body -->
+							<div class="modal-body">
+								Second frequency field can't be 0 or less.
+							</div>
+							<!-- Modal Footer (Optional) -->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="freq1NullModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<!-- Modal Header -->
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalLabel"> ~ Error ~</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<!-- Modal Body -->
+							<div class="modal-body">
+								First frequency field can't be null or empty.
+							</div>
+							<!-- Modal Footer (Optional) -->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="freq2NullModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<!-- Modal Header -->
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalLabel"> ~ Error ~</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<!-- Modal Body -->
+							<div class="modal-body">
+								Second frequency field can't be null or empty.
+							</div>
+							<!-- Modal Footer (Optional) -->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="freq1UndefinedModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<!-- Modal Header -->
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalLabel"> ~ Error ~</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<!-- Modal Body -->
+							<div class="modal-body">
+								First frequency field can't be undefined.
+							</div>
+							<!-- Modal Footer (Optional) -->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="freq2UndefinedModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<!-- Modal Header -->
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalLabel"> ~ Error ~</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<!-- Modal Body -->
+							<div class="modal-body">
+								Second frequency field can't be undefined.
+							</div>
+							<!-- Modal Footer (Optional) -->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="freq2UndefinedModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<!-- Modal Header -->
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalLabel"> ~ Error ~</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<!-- Modal Body -->
+							<div class="modal-body">
+								Second frequency field can't be undefined.
+							</div>
+							<!-- Modal Footer (Optional) -->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="freq1EmptyModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<!-- Modal Header -->
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalLabel"> ~ Error ~</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<!-- Modal Body -->
+							<div class="modal-body">
+								First frequency field can't be empty.
+							</div>
+							<!-- Modal Footer (Optional) -->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="freq2EmptyModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<!-- Modal Header -->
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalLabel"> ~ Error ~</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<!-- Modal Body -->
+							<div class="modal-body">
+								Second frequency field can't be empty.
+							</div>
+							<!-- Modal Footer (Optional) -->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="freq1EqualFreq2Modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<!-- Modal Header -->
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalLabel"> ~ Error ~</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<!-- Modal Body -->
+							<div class="modal-body">
+								For a binaural mind machine we can't have both the frequencies as same.
+							</div>
+							<!-- Modal Footer (Optional) -->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="freq1TooLowModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<!-- Modal Header -->
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalLabel"> ~ Error ~</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<!-- Modal Body -->
+							<div class="modal-body">
+								For a binaural mind machine we can't have first frequency value below than 20 hz.
+							</div>
+							<!-- Modal Footer (Optional) -->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="freq2TooLowModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<!-- Modal Header -->
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalLabel"> ~ Error ~</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<!-- Modal Body -->
+							<div class="modal-body">
+								For a binaural mind machine we can't have second frequency value below than 20 hz.
+							</div>
+							<!-- Modal Footer (Optional) -->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="freq1TooHighModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<!-- Modal Header -->
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalLabel"> ~ Error ~</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<!-- Modal Body -->
+							<div class="modal-body">
+								For a binaural mind machine we can't have first frequency value above than 20000 hz.
+							</div>
+							<!-- Modal Footer (Optional) -->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="freq2TooHighModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<!-- Modal Header -->
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalLabel"> ~ Error ~</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<!-- Modal Body -->
+							<div class="modal-body">
+								For a binaural mind machine we can't have second frequency value above than 20000 hz.
+							</div>
+							<!-- Modal Footer (Optional) -->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="modal fade" id="instructionModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<!-- Modal Header -->
 							<div class="modal-header">
-								<h5 class="modal-title" id="modalLabel"> ~ Instruction ~</h5>
+								<h5 class="modal-title" id="modalLabel"> ~ Instructions ~</h5>
 								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 							</div>
 							<!-- Modal Body -->
@@ -408,9 +690,9 @@
 		<script src="./js/bootstrap-input-spinner.js"></script>
 		<script src="./js/main.js"></script>
 		<script>
-			disclaimer();
+			modalCaller();
 		</script>
-    <script src="cordova.js"></script>
-    <script defer src="js/index.js"></script>
-	</body>
+	    <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+</body>
 </html>

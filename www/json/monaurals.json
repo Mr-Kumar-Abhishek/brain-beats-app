@@ -21,6 +21,13 @@
       "data_id":"unskywp54"
    },
    {
+      "data_name":"0.15 Hz Monaural Beats over 639 Hz Solfeggio Frequency",
+      "data_description":"Monaural Beats for relief from depression [Phase 3] due to past events. This is for relief from major depression and grief [Phase 3]. Range Monaurals for it are comming soon which will be more effective.",
+      "data_start":"play_monaural(639, 639.15);",
+      "data_stop":"stop_monaural();",
+      "data_id":"unskywp55"
+   },
+   {
       "data_name":"0.15 Hz Monaural Beats over 963 Hz Solfeggio Frequency",
       "data_description":"Monaural Beats for relief from depression [Phase 2]. This is for major depression [Phase 2]. Range Monaurals are comming soon which will be more effective.",
       "data_start":"play_monaural(963, 963.15);",
@@ -28,11 +35,60 @@
       "data_id":"ric5jfhj5"
    },
    {
+      "data_name":"0.161803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475 Hz Monaural Beats over 20 Hz Rife Frequency",
+      "data_description":"Monaural Beats for stabilizing field of meaning (It should be used during sleep) [Phase (-1)]. Used for samadhi state [Phase (-1)].",
+      "data_start":"play_monaural(20, 20.161803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475);",
+      "data_stop":"stop_monaural();",
+      "data_id":"ric5jfhi6"
+   },
+   {
+      "data_name":"0.161803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475 Hz Monaural Beats over 40 Hz Pure Tone Frequency",
+      "data_description":"Monaural Beats for stabilizing field of meaning (It should be used during sleep) [Phase 0]. Used for samadhi state [Phase 0].",
+      "data_start":"play_monaural(40, 40.161803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475);",
+      "data_stop":"stop_monaural();",
+      "data_id":"ric5jfhj6"
+   },
+   {
+      "data_name":"0.161803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475 Hz Monaural Beats over 63 Hz Solfeggio Frequency",
+      "data_description":"Monaural Beats for stabilizing field of meaning (It should be used during sleep) [Phase 1]. Used for samadhi state [Phase 1].",
+      "data_start":"play_monaural(63, 63.161803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475);",
+      "data_stop":"stop_monaural();",
+      "data_id":"ric5jfhj7"
+   },
+   {
       "data_name":"0.20 Hz Monaural Beats over 396 Hz Solfeggio Frequency",
-      "data_description":"Monaural Beats for relief from post-traumatics[Phase 1].",
+      "data_description":"Monaural Beats for relief for post-traumatics[Phase 1].",
       "data_start":"play_monaural(396, 396.20);",
       "data_stop":"stop_monaural();",
       "data_id":"s0e7rub80"
+   },
+   {
+      "data_name":"0.20 Hz Monaural Beats over 417 Hz Solfeggio Frequency",
+      "data_description":"Monaural Beats for relief for post-traumatics [Phase 2].",
+      "data_start":"play_monaural(417, 417.20);",
+      "data_stop":"stop_monaural();",
+      "data_id":"s0e7rub81"
+   },
+   {
+      "data_name":"0.20 Hz Monaural Beats over 618 Hz Solfeggio Frequency",
+      "data_description":"Monaural Beats for relief for post-traumatics [Phase 3].",
+      "data_start":"play_monaural(618, 618.20);",
+      "data_stop":"stop_monaural();",
+      "data_id":"s0e7rub82"
+   },
+   {
+      "data_name":"0.20 Hz Monaural Beats over 639 Hz Solfeggio Frequency",
+      "data_description":"Monaural Beats for relief for post-traumatics [Phase 4].",
+      "data_start":"play_monaural(639, 639.20);",
+      "data_stop":"stop_monaural();",
+      "data_id":"s0e7rub83"
+   },
+   {
+      "data_name":"0.20 Hz Monaural Beats over 669 Hz Solfeggio Frequency",
+      "data_description":"Monaural Beats for relief for post-traumatics [Phase 5].",
+      "data_start":"play_monaural(669, 669.20);",
+      "data_stop":"stop_monaural();",
+      "data_id":"s0e7rub84"
    },
    {
       "data_name":"0.26 Hz Monaural Beats over 174 Hz Solfeggio Frequency",
@@ -196,21 +252,21 @@
       "data_id": "ezlajbvzv"
    },
    {
-      "data_name":"1.618033988749 Hz Binaural Beats over 174 Hz Solfeggio Frequency",
+      "data_name":"1.618033988749 Hz Monaural Beats over 174 Hz Solfeggio Frequency",
       "data_description":"Monaural beats for perfect body and face (golden ratio) [Phase 0].",
       "data_start":"play_monaural(174, 175.618033988749);",
       "data_stop":"stop_monaural();",
       "data_id":"h19zpydhm"
    },
    {
-      "data_name":"1.618033988749 Hz Binaural Beats over 285 Hz Solfeggio Frequency",
+      "data_name":"1.618033988749 Hz Monaural Beats over 285 Hz Solfeggio Frequency",
       "data_description":"Monaural beats for perfect body and face (golden ratio) [Phase 1].",
       "data_start":"play_monaural(285, 286.618033988749);",
       "data_stop":"stop_monaural();",
       "data_id":"h20zpydhn"
    },
    {
-      "data_name":"1.618033988749 Hz Binaural Beats over 528 Hz Solfeggio Frequency",
+      "data_name":"1.618033988749 Hz Monaural Beats over 528 Hz Solfeggio Frequency",
       "data_description":"Monaural beats for perfect body and face (golden ratio) [Phase 2].",
       "data_start":"play_monaural(528, 529.618033988749);",
       "data_stop":"stop_monaural();",
@@ -243,6 +299,13 @@
       "data_start":"play_monaural(528, 530.4);",
       "data_stop":"stop_monaural();",
       "data_id":"jmx44fflw"
+   },
+   {
+      "data_name":"2.4 Hz Monaural Beats over 639 Hz Solfeggio Frequency",
+      "data_description":"Monaural beats for deep sleep [Phase 3].",
+      "data_start":"play_monaural(639, 641.4);",
+      "data_stop":"stop_monaural();",
+      "data_id":"jmx44fflx"
    },
    {
       "data_name":"3.5 Hz Monaural Beats over 174 Hz Solfeggio Frequency",
@@ -721,7 +784,7 @@
       "data_id":"xlf1a1lbi"
    },
    {
-      "data_name":"12.3 Hz Monaural Beats over 787 Hz Rife",
+      "data_name":"12.3 Hz Monaural Beats over 787 Hz Rife Frequency",
       "data_description":"Associated with eyes. It gives better visualization [Phase 3].",
       "data_start":"play_monaural(787, 799.3);",
       "data_stop":"stop_monaural();",

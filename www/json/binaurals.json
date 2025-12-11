@@ -14,11 +14,25 @@
       "data_id":"dcpn82qv4p"
    },
    {
+      "data_name":"0.15 Hz Binaural Beats over 20 Hz Rife Frequency",
+      "data_description":"Binaural Beats for relief from work related burnouts. It should be used with base-boosted bluetooth earbuds during sleep with comfortable volume.",
+      "data_start":"play_binaural(20, 20.15);",
+      "data_stop":"stop_binaural();",
+      "data_id":"uf07weww2"
+   },
+   {
       "data_name":"0.15 Hz Binaural Beats over 417 Hz Solfeggio Frequency",
       "data_description":"Binaural Beats for relief from depression [Phase 1] due to past events. This is for mild depression[Phase 1]. Range Binaurals for it are comming soon which will be more effective.",
       "data_start":"play_binaural(417, 417.15);",
       "data_stop":"stop_binaural();",
       "data_id":"uf07weww3"
+   },
+   {
+      "data_name":"0.15 Hz Binaural Beats over 639 Hz Solfeggio Frequency",
+      "data_description":"Binaural Beats for relief from depression [Phase 3] due to past events. This is for relief from major depression and grief [Phase 3]. Range Binaurals for it are comming soon which will be more effective.",
+      "data_start":"play_binaural(639, 639.15);",
+      "data_stop":"stop_binaural();",
+      "data_id":"uf07weww4"
    },
    {
       "data_name":"0.15 Hz Binaural Beats over 963 Hz Solfeggio Frequency",
@@ -28,11 +42,60 @@
       "data_id":"jfo5p4tod"
    },
    {
+      "data_name":"0.161803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475 Hz Binaural Beats over 20 Hz Rife Frequency",
+      "data_description":"Binaural Beats for stabilizing field of meaning (It should be used during sleep) [Phase (-1)]. Used for samadhi state [Phase (-1)].",
+      "data_start":"play_binaural(20, 20.161803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475);",
+      "data_stop":"stop_binaural();",
+      "data_id":"jfo5p4tnf"
+   },
+   {
+      "data_name":"0.161803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475 Hz Binaural Beats over 40 Hz Pure Tone Frequency",
+      "data_description":"Binaural Beats for stabilizing field of meaning (It should be used during sleep) [Phase 0]. Used for samadhi state [Phase 0].",
+      "data_start":"play_binaural(40, 40.161803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475);",
+      "data_stop":"stop_binaural();",
+      "data_id":"jfo5p4tof"
+   },
+   {
+      "data_name":"0.161803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475 Hz Binaural Beats over 63 Hz Solfeggio Frequency",
+      "data_description":"Binaural Beats for stabilizing field of meaning (It should be used during sleep) [Phase 1]. Used for samadhi state [Phase 1].",
+      "data_start":"play_binaural(63, 63.161803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475);",
+      "data_stop":"stop_binaural();",
+      "data_id":"jfo5p4toe"
+   },
+   {
       "data_name":"0.20 Hz Binaural Beats over 396 Hz Solfeggio Frequency",
-      "data_description":"Binaural Beats for relief from post-traumatics[Phase 1].",
+      "data_description":"Binaural Beats for relief for post-traumatics[Phase 1].",
       "data_start":"play_binaural(396, 396.20);",
       "data_stop":"stop_binaural();",
       "data_id":"ugl5mdwwp"
+   },
+   {
+      "data_name":"0.20 Hz Binaural Beats over 417 Hz Solfeggio Frequency",
+      "data_description":"Binaural Beats for relief for post-traumatics[Phase 2].",
+      "data_start":"play_binaural(417, 417.20);",
+      "data_stop":"stop_binaural();",
+      "data_id":"ugl5mdwwq"
+   },
+   {
+      "data_name":"0.20 Hz Binaural Beats over 618 Hz Solfeggio Frequency",
+      "data_description":"Binaural Beats for relief for post-traumatics[Phase 3].",
+      "data_start":"play_binaural(618, 618.20);",
+      "data_stop":"stop_binaural();",
+      "data_id":"ugl5mdwwr"
+   },
+   {
+      "data_name":"0.20 Hz Binaural Beats over 639 Hz Solfeggio Frequency",
+      "data_description":"Binaural Beats for relief for post-traumatics[Phase 4].",
+      "data_start":"play_binaural(639, 639.20);",
+      "data_stop":"stop_binaural();",
+      "data_id":"ugl5mdwws"
+   },
+   {
+      "data_name":"0.20 Hz Binaural Beats over 669 Hz Solfeggio Frequency",
+      "data_description":"Binaural Beats for relief for post-traumatics[Phase 5].",
+      "data_start":"play_binaural(669, 669.20);",
+      "data_stop":"stop_binaural();",
+      "data_id":"ugl5mdwwt"
    },
    {
       "data_name":"0.26 Hz Binaural Beats over 174 Hz Solfeggio Frequency",
@@ -183,7 +246,7 @@
    },
    {
       "data_name":"1.5 Hz Binaural Beats over 174 Hz Solfeggio Frequency",
-      "data_description":"Binaural Beats of Abhrahams Universal Healing Rate. Used for Sleep [Flavour 2]. Subjects who's ailments have manifested into the 4th stage chronic fatigue, where some of disease is apparent, experienced a release from those negative sensations of thier symptoms when moved to 1.5 Hz [Flavour 1].",
+      "data_description":"Binaural Beats of Abhrahams Universal Healing Rate. Used for Sleep [Flavour 2, Phase 1]. Subjects who's ailments have manifested into the 4th stage chronic fatigue, where some of disease is apparent, experienced a release from those negative sensations of thier symptoms when moved to 1.5 Hz [Flavour 1].",
       "data_start":"play_binaural(174, 175.5);",
       "data_stop":"stop_binaural();",
       "data_id":"i18zpydhj"
@@ -238,6 +301,13 @@
       "data_id":"o8rt1cav6"
    },
    {
+      "data_name":"2.4 Hz Binaural Beats over 639 Hz Solfeggio Frequency",
+      "data_description":"Binaural beats for deep sleep [Phase 3].",
+      "data_start":"play_binaural(639, 641.4);",
+      "data_stop":"stop_binaural();",
+      "data_id":"o8rt1cav7"
+   },
+   {
       "data_name":"3.5 Hz Binaural Beats over 174 Hz Solfeggio Frequency",
       "data_description":"whole being regeneration [Phase 1]. Lower Earth Resonance [Phase 1] or hell resonance [Phase 1]. DNA stimulation [Phase 1]. Relief from anxiety [Phase 0, 2nd flavor]",
       "data_start":"play_binaural(174, 177.5);",
@@ -266,6 +336,13 @@
       "data_id":"2vtp6ugkq"
    },
    {
+      "data_name":"3.5 Hz Binaural Beats over 639 Hz Solfeggio Frequency",
+      "data_description":"Binaural beats for enhancement of receptivity of relief from depression [Phase 2] [Phase 3].",
+      "data_start":"play_binaural(639, 642.5);",
+      "data_stop":"stop_binaural();",
+      "data_id":"2vtp6ugkr"
+   },
+   {
       "data_name":"3.5 Hz Binaural Beats over 741 Hz Solfeggio Frequency",
       "data_description":"Binaural beats for relief from anxiety [Phase 2, 2nd flavor] via throat chakra (visuddha). Accelerated language retention [Phase 1]",
       "data_start":"play_binaural(741, 744.5);",
@@ -274,14 +351,14 @@
    },
    {
       "data_name":"3.5 Hz Binaural Beats over 852 Hz Solfeggio Frequency",
-      "data_description":"Binaural beats for feeling with unity everything [Phase 1], accelerated language retention [Phase 2], enhancement of receptivity relief from depression [Phase 1].",
+      "data_description":"Binaural beats for feeling with unity everything [Phase 1], accelerated language retention [Phase 2], enhancement of receptivity of relief from depression [Phase 1].",
       "data_start":"play_binaural(852, 855.5);",
       "data_stop":"stop_binaural();",
       "data_id":"57c4xsf65"
    },
    {
       "data_name":"3.5 Hz Binaural Beats over 963 Hz Solfeggio Frequency",
-      "data_description":"Binaural beats for feeling with unity everything [Phase 2], accelerated language retention [Phase 3], enhancement of receptivity relief from depression [Phase 2].",
+      "data_description":"Binaural beats for feeling with unity everything [Phase 2], accelerated language retention [Phase 3], enhancement of receptivity of relief from depression [Phase 2].",
       "data_start":"play_binaural(963, 966.5);",
       "data_stop":"stop_binaural();",
       "data_id":"2b32jy4d1"

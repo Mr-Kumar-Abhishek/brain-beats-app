@@ -79,11 +79,13 @@ var boolOrange = 0;
 var boolSineMonaural = 0;
 var boolRifeMonaural = 0;
 var boolALTMonaural = 0;
+var boolBIOMonaural = 0;
 var boolSine3D = 0;
 var boolRife3D = 0;
 var boolSine3Dauto = 0;
 var boolRife3Dauto = 0;
 var boolALT3dauto = 0;
+var boolBIO3dauto = 0;
 var boolYellow = 0;
 var boolTurquoise = 0;
 var bool_mind_machine_binaural = 0;
@@ -93,6 +95,7 @@ var z_values;
 
 var k_arr = [63, 174, 285, 396, 417, 528, 549.21, 618, 639, 669, 741, 762, 831, 852, 963, 1074, 1185, 1296, 1407, 1518, 1629, 1740, 1782, 1803, 1851, 1953, 1962, 1974, 2073, 2085, 2184, 2196, 2295, 2406, 2517, 2628, 2739, 2850, 2961];
 var kundalini_flag = 0;
+var astral_broadcast_flag = 0;
 var k_indexer = 0;
 
 var notification;
@@ -114,6 +117,53 @@ var panning_model = 'HRTF'; // used in binaural and 3D sounds
 
   // Define a variable to store the animation duration
   var duration = 0.01;
+
+
+function modalDisplayer(modalName = 'instructionModal', focusName = 'search-me') {
+  // Get the modal element
+    const modalElement = document.getElementById(modalName);
+    if (!modalElement) {
+        console.error("Modal element #" + modalName + "not found!");
+        return; // Exit if modal doesn't exist
+    }
+
+    const myModal = new bootstrap.Modal(modalElement, {
+      backdrop: 'static', // Prevents closing by clicking outside
+      keyboard: false    // Prevents closing with the Escape key
+    });
+
+    // --- Add this event listener ---
+    modalElement.addEventListener('hidden.bs.modal', function (event) {
+      // Find the search input element
+      const focusElement = document.getElementById(focusName);
+      // If the search input exists, set focus to it
+      if (focusElement) {
+        focusElement.focus();
+      } else {
+        // Fallback: focus the body if search input isn't found for some reason
+        document.body.focus();
+      }
+    });
+    // --- End of added listener ---
+
+    // Show the modal
+    myModal.show();;
+}
+
+function modalCaller(modalName = 'instructionModal', focusName = 'search-me') {
+  if (modalName === 'instructionModal') {
+    document.addEventListener('DOMContentLoaded', () => {
+      modalDisplayer(modalName, focusName);
+    });
+  } else {
+    modalDisplayer(modalName, focusName);
+  }
+}
+
+// Make sure the disclaimer function is called somewhere if it wasn't already
+// (Though it seems to be called at the end of search.html)
+// modalCaller();
+
   
 
 function start_dreamachine(freq) {
@@ -304,6 +354,24 @@ function play_kundalini(beat_freq_1) {
 
 }
 
+function play_astral_broadcast(beat_freq_1) {
+  
+  beat_freq_2 = beat_freq_1 + 4;
+
+  if (astral_broadcast_flag == 0) {
+  
+     astral_broadcast_flag = 1;
+  
+    play_binaural(beat_freq_1, beat_freq_2);
+
+  }else {
+
+    stop_astral_broadcast();
+    play_astral_broadcast(beat_freq_1);
+  }
+
+}
+
 function play_monaural(freq1, freq2){
   
   beat_freq_1 = freq1;
@@ -428,6 +496,25 @@ async function kundalini_rotator() {
       break;
     }
     play_kundalini(k_arr[k_indexer]);
+    k_indexer++;
+    // Use a break statement to exit the loop when you want to stop the function
+    
+    // Use a sleep function to pause the execution for 1000 milliseconds
+    await new Promise(done => setTimeout(() => done(), 1000));
+  }
+}
+
+
+async function astral_broadcast_rotator() {
+  // Use a while loop to keep running the function until some condition is met
+  while (true) {
+    if(k_indexer == k_arr.length) {
+      k_indexer = 0;
+    }
+    if ($(".yin-yang").data('state') == 0) {
+      break;
+    }
+    play_astral_broadcast(k_arr[k_indexer]);
     k_indexer++;
     // Use a break statement to exit the loop when you want to stop the function
     
@@ -752,6 +839,26 @@ function distributePoints(n) {
   return points;
 }
 
+function play_BIO_monaural(tone_freq_array) {
+  if(boolBIOMonaural == 0){
+    boolBIOMonaural = 1;
+    play_sine_monaural(tone_freq_array);
+  } else { 
+    stop_BIO_monaural();
+    play_BIO_monaural(tone_freq_array);
+  }
+}
+
+function play_BIO_3d_auto(tone_freq_array){
+  if(boolBIO3dauto == 0){
+    boolBIO3dauto = 1;
+    play_sine_3d_auto(tone_freq_array);
+  }else {
+    stop_BIO_3d_auto();
+    play_BIO_3d_auto(tone_freq_array);
+  }
+}
+
 function play_ALT_3d_auto(tone_freq_array){
   if(boolALT3dauto == 0){
     boolALT3dauto = 1;
@@ -782,7 +889,11 @@ function play_sine_3d_auto(tone_freq_array) {
 
       play_binaural(174, 174+tone_freq_array[0]);
 
-    }else {
+    }else if(tone_freq_array.length == 1 && tone_freq_array[0] >= 63){
+      
+      play_pure_tone(tone_freq_array[0]);
+    
+    }else { 
 
       var auto_matrix = distributePoints(tone_freq_array.length);
 
@@ -799,7 +910,7 @@ function play_sine_3d_auto(tone_freq_array) {
 
     }
     
-  } else {
+  }else{
     stop_sine_3d_auto();
     play_sine_3d_auto(tone_freq_array);
   }
@@ -984,6 +1095,17 @@ function play_mind_machine_binaural(freq1, freq2){
 
   if (bool_mind_machine_binaural == 0) {
 
+    if (freq1 < 0 || freq2 < 0) {
+      console.error("Frequency values must be non-negative.");
+      return;
+    } else if (freq1 == null || freq2 == null) {
+      console.error("Frequency values cannot be null.");
+      return;
+    } else if (freq1 == undefined || freq2 == undefined) {
+      console.error("Frequency values cannot be undefined.");
+      return;
+    }
+    
     bool_mind_machine_binaural = 1;
     var freq = Math.abs(freq2 - freq1);
 
@@ -1056,9 +1178,24 @@ function stop_kundalini() {
   }
 }
 
+function stop_astral_broadcast() {
+  console.log("kundalini flag value = " + astral_broadcast_flag);
+  if (astral_broadcast_flag == 1 ) {
+    astral_broadcast_flag = 0;
+    console.log("Stop Astral Broadcaster Called.");
+    stop_binaural();
+  }
+}
+
 function kundalini_halter() {
   $(".yin-yang").data('state', 0);
   stop_kundalini();
+  k_indexer = 0;
+}
+
+function astral_broadcast_halter() {
+  $(".yin-yang").data('state', 0);
+  stop_astral_broadcast();
   k_indexer = 0;
 }
 
@@ -1074,6 +1211,17 @@ function kundalini_toggler(){
   }
 }
 
+
+function astral_broadcast_toggler(){
+  if ( $(".yin-yang").data('state') == 0) {
+    $(".yin-yang").data('state', 1); 
+    astral_broadcast_rotator();
+  }else if ($(".yin-yang").data('state') == 1) {
+    $(".yin-yang").data('state', 0);
+    stop_astral_broadcast();
+    k_indexer--;
+  }
+}
 
 
 function stop_white_noise() {
@@ -1210,6 +1358,17 @@ function stop_ALT_3d_auto(){
   stop_sine_3d_auto();
 }
 
+function stop_BIO_monaural(){ 
+  boolBIOMonaural = 0;
+  stop_sine_monaural();
+} 
+
+function stop_BIO_3d_auto(){
+  boolBIO3dauto = 0;  
+  stop_sine_3d_auto();
+}
+
+
 function stop_ALT_monaural(){
   boolALTMonaural = 0;
   stop_sine_monaural();
@@ -1244,19 +1403,88 @@ function stop_rife_3d_auto() {
 function stop_sine_3d_auto() {
   stop_sine();
   stop_binaural();
+  stop_pure_tone();
   boolSine3Dauto = 0;
 }
 
 function play_monaural_generator(){
   var freq1 = $("#freq1").val();
   var freq2 = $("#freq2").val();
+   if(generator_validator(freq1, freq2, "monaural")){
+    play_binaural(freq1, freq2);
+  } else {
+    return console.error("Monaural generator validation failed.");
+  }
   play_monaural(freq1, freq2);
 }
+
+function generator_validator(freq1, freq2, freq_type) {
+  if (freq1 == undefined) {
+    console.error("Frequency values cannot be undefined.");
+    modalCaller("freq1UndefinedModal", "freq1");
+    return false;
+  } else if (freq2 == undefined) {
+    console.error("Frequency values cannot be undefined.");
+    modalCaller("freq2UndefinedModal", "freq2");
+    return false;
+  } else if (freq1 == null) {
+    console.error("Frequency values cannot be null.");
+    modalCaller("freq1NullModal", "freq1");
+    return false;
+  } else if (freq2 == null) {
+    console.error("Frequency values cannot be null.");
+    modalCaller("freq2NullModal", "freq2");
+    return false;
+  } else if (freq1 == "" ) {
+    console.error("Frequency values cannot be empty.");
+    modalCaller("freq1EmptyModal", "freq1");
+    return false;
+  } else if (freq2 == "") {
+    console.error("Frequency values cannot be empty.");
+    modalCaller("freq2EmptyModal", "freq2");
+    return false;
+  } else if (freq2 <= 0) {
+    console.error("Frequency values must be non-negative.");
+    modalCaller("freq2NegativeModal", "freq2");
+    return false;
+  } else if (freq1 <= 0 ) {
+    console.error("Frequency values must be non-negative.");
+    modalCaller("freq1NegativeModal", "freq1");
+    return false;
+  } else if (freq_type == "binaural" && freq1 == freq2) {
+    console.error("For binaural beats, the two frequencies must be different.");
+    modalCaller("freq1EqualFreq2Modal", "freq1");
+    return false;
+  } else if (freq1 < 20) {
+    console.error("Frequency values must be between 20 Hz and 20,000 Hz.");
+    modalCaller("freq1TooLowModal", "freq1");
+    return false;
+  } else if (freq2 < 20) { 
+    console.error("Frequency values must be between 20 Hz and 20,000 Hz.");
+    modalCaller("freq2TooLowModal", "freq2");
+    return false;
+  } else if (freq1 > 20000) {
+    console.error("Frequency values must be between 20 Hz and 20,000 Hz.");
+    modalCaller("freq1TooHighModal", "freq1");
+    return false;
+  } else if (freq2 > 20000) { 
+    console.error("Frequency values must be between 20 Hz and 20,000 Hz.");
+    modalCaller("freq2TooHighModal", "freq2");
+    return false;
+  } else {
+      return true;
+   }
+} 
+
 
 function play_binaural_generator(){
   var freq1 = $("#freq1").val();
   var freq2 = $("#freq2").val();
-  play_binaural(freq1, freq2);
+   if(generator_validator(freq1, freq2, "binaural")){
+    play_binaural(freq1, freq2);
+  } else {
+    return console.error("Binaural generator validation failed.");
+  }
 }
 
 function play_isochronic_generator(){
@@ -1284,7 +1512,11 @@ function play_sq_monaural_generator(){
 function play_mind_machine_binaural_generator(){
   var freq1 = $("#freq1").val();
   var freq2 = $("#freq2").val();
-  play_mind_machine_binaural(freq1, freq2);
+   
+
+  if(generator_validator(freq1, freq2, "binaural")){
+    play_mind_machine_binaural(freq1, freq2);
+  }
 }
 
 function toggle_volume(){
@@ -1306,7 +1538,7 @@ function live_volume_set(){
     angel_flag == 1 || boolSineMonaural == 1 || boolSine3D == 1 || 
     boolSine3Dauto == 1 || boolRife3Dauto == 1 || boolRifeMonaural == 1 || 
     boolRife3D == 1 || monaural_flag == 1 || binaural_flag == 1 || 
-    sq_monaural_flag == 1 || double_tone_flag == 1 || kundalini_flag == 1 || 
+    sq_monaural_flag == 1 || double_tone_flag == 1 || kundalini_flag == 1 ||  astral_broadcast_flag == 1 ||
     boolALT3dauto == 1 || boolALTMonaural == 1 || bool_mind_machine_binaural == 1){
 
    if(volume.gain.value != undefined) {
@@ -1453,40 +1685,3 @@ function warning(whichy){
       
 }
 
-
-function disclaimer() {
-  document.addEventListener('DOMContentLoaded', () => {
-    // Get the modal element
-    const instructionModalElement = document.getElementById('instructionModal');
-    if (!instructionModalElement) {
-        console.error("Modal element #instructionModal not found!");
-        return; // Exit if modal doesn't exist
-    }
-
-    const myModal = new bootstrap.Modal(instructionModalElement, {
-      backdrop: 'static', // Prevents closing by clicking outside
-      keyboard: false    // Prevents closing with the Escape key
-    });
-
-    // --- Add this event listener ---
-    instructionModalElement.addEventListener('hidden.bs.modal', function (event) {
-      // Find the search input element
-      const searchInput = document.getElementById('search-me');
-      // If the search input exists, set focus to it
-      if (searchInput) {
-        searchInput.focus();
-      } else {
-        // Fallback: focus the body if search input isn't found for some reason
-        document.body.focus();
-      }
-    });
-    // --- End of added listener ---
-
-    // Show the modal
-    myModal.show();
-  });
-}
-
-// Make sure the disclaimer function is called somewhere if it wasn't already
-// (Though it seems to be called at the end of search.html)
-// disclaimer();
