@@ -14,6 +14,13 @@
      "data_id": "dwu0hubnb"
    },
    {
+     "data_name": "0.161803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475 hz Dreamachine Beats",
+     "data_description": "Dreamachine Beats for pure samadhi meditation. This is for stablization of field of meaning.",
+     "data_start": "start_dreamachine(0.161803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475);",
+     "data_stop": "stop_dreamachine();",
+     "data_id": "t8u9tjx48"
+   },
+   {
      "data_name": "0.20 hz Dreamachine Beats",
      "data_description": "Dreamachine Beats for relief from post-traumatics.",
      "data_start": "start_dreamachine(0.20);",
@@ -68,6 +75,13 @@
      "data_start": "start_dreamachine(1.2);",
      "data_stop": "stop_dreamachine();",
      "data_id": "j5arlnle5"
+   },
+   {
+    "data_name": "1.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475 hz Dreamachine Beats",
+    "data_description": "Dreamachine beats for golden ratio. Perfect face and body along with removal of desires.",
+    "data_start": "start_dreamachine(1.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475);",
+    "data_stop": "stop_dreamachine();",
+    "data_id": "j5arlnlf5"
    },
    {
     "data_name": "1.5 hz Dreamachine Beats",

@@ -246,23 +246,30 @@
       "data_id":"u8vla4bah"
    },
    {
-		"data_name": "1.618033988749 Hz Square Wave Monaural Beats over 174 Hz Solfeggio Frequency",
+		"data_name": "1.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475 Hz Square Wave Monaural Beats over 40 Hz Pure Tone",
+		"data_description": "Square wave monaural beats for removal of desires [Phase 0].",
+		"data_start": "play_sq_monaural(40, 41.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475);",
+		"data_stop": "stop_sq_monaural();",
+		"data_id": "h25zpydhl"
+	},
+   {
+		"data_name": "1.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475 Hz Square Wave Monaural Beats over 174 Hz Solfeggio Frequency",
 		"data_description": "Square wave monaural beats for perfect body and face (golden ratio) [Phase 0].",
-		"data_start": "play_sq_monaural(174, 175.618033988749);",
+		"data_start": "play_sq_monaural(174, 175.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475);",
 		"data_stop": "stop_sq_monaural();",
 		"data_id": "h25zpydhm"
 	},
 	{
-		"data_name": "1.618033988749 Hz Square Wave Monaural Beats over 285 Hz Solfeggio Frequency",
+		"data_name": "1.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475 Hz Square Wave Monaural Beats over 285 Hz Solfeggio Frequency",
 		"data_description": "Square wave monaural beats for perfect body and face (golden ratio) [Phase 1].",
-		"data_start": "play_sq_monaural(285, 286.618033988749);",
+		"data_start": "play_sq_monaural(285, 286.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475);",
 		"data_stop": "stop_sq_monaural();",
 		"data_id": "h26zpydhn"
 	},
 	{
-		"data_name": "1.618033988749 Hz Square Wave Monaural Beats over 528 Hz Solfeggio Frequency",
+		"data_name": "1.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475 Hz Square Wave Monaural Beats over 528 Hz Solfeggio Frequency",
 		"data_description": "Square wave monaural beats for perfect body and face (golden ratio) [Phase 2].",
-		"data_start": "play_sq_monaural(528, 529.618033988749);",
+		"data_start": "play_sq_monaural(528, 529.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475);",
 		"data_stop": "stop_sq_monaural();",
 		"data_id": "h27zpydhp"
 	},
@@ -363,6 +370,13 @@
       "data_start":"play_sq_monaural(639, 642.6);",
       "data_stop":"stop_sq_monaural();",
       "data_id":"4u5rsi22y"
+   },
+   {
+      "data_name":"4 Hz Square Wave Monaural Beats over 40 Hz Pure Tone",
+      "data_description":"Square Wave Monaural Beats for telepathic knowledge distributions. Only to be used by skilled telpathic professionals.",
+      "data_start":"play_sq_monaural(40, 44);",
+      "data_stop":"stop_sq_monaural();",
+      "data_id":"utg39hycp"
    },
    {
       "data_name":"4 Hz Square Wave Monaural Beats over 174 Hz Solfeggio Frequency",

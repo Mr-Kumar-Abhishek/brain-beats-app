@@ -252,23 +252,30 @@
       "data_id":"i18zpydhj"
    },
    {
-      "data_name":"1.618033988749 Hz Binaural Beats over 174 Hz Solfeggio Frequency",
+      "data_name":"1.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475 Hz Binaural Beats over 40 Hz Pure Tone",
+      "data_description":"Binaural beats for removal of desires [Phase 0].",
+      "data_start":"play_binaural(40, 41.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475);",
+      "data_stop":"stop_binaural();",
+      "data_id":"h18zpydhl"
+   },
+   {
+      "data_name":"1.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475 Hz Binaural Beats over 174 Hz Solfeggio Frequency",
       "data_description":"Binaural beats for perfect body and face (golden ratio) [Phase 0].",
-      "data_start":"play_binaural(174, 175.618033988749);",
+      "data_start":"play_binaural(174, 175.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475);",
       "data_stop":"stop_binaural();",
       "data_id":"h18zpydhm"
    },
    {
-      "data_name":"1.618033988749 Hz Binaural Beats over 285 Hz Solfeggio Frequency",
+      "data_name":"1.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475 Hz Binaural Beats over 285 Hz Solfeggio Frequency",
       "data_description":"Binaural beats for perfect body and face (golden ratio) [Phase 1].",
-      "data_start":"play_binaural(285, 286.618033988749);",
+      "data_start":"play_binaural(285, 286.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475);",
       "data_stop":"stop_binaural();",
       "data_id":"h18zpydhn"
    },
    {
-      "data_name":"1.618033988749 Hz Binaural Beats over 528 Hz Solfeggio Frequency",
+      "data_name":"1.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475 Hz Binaural Beats over 528 Hz Solfeggio Frequency",
       "data_description":"Binaural beats for perfect body and face (golden ratio) [Phase 2].",
-      "data_start":"play_binaural(528, 529.618033988749);",
+      "data_start":"play_binaural(528, 529.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418939113748475);",
       "data_stop":"stop_binaural();",
       "data_id":"h18zpydhp"
    },
@@ -376,6 +383,13 @@
       "data_start":"play_binaural(639, 642.6);",
       "data_stop":"stop_binaural();",
       "data_id":"75ejrpsyb"
+   },
+   {
+      "data_name":"4 Hz Binaural Beats over 40 Hz Pure Tone",
+      "data_description":"Binaural beats for telepathic knowledge distribution. Only to be used by skilled telpathic professionals.",
+      "data_start":"play_binaural(40, 44);",
+      "data_stop":"stop_binaural();",
+      "data_id":"ugzck7omq"
    },
    {
       "data_name":"4 Hz Binaural Beats over 174 Hz Solfeggio Frequency",
